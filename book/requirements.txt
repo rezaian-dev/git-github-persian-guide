@@ -1,0 +1,6 @@
+markdown-it-py
+pygments
+weasyprint
+ebooklib
+Pillow
+pypdfium2

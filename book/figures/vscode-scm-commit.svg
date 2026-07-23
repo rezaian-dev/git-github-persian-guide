@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640">
+  <rect width="1100" height="640" rx="18" fill="#020617"/>
+  <rect x="20" y="20" width="1060" height="600" rx="14" fill="#0f172a"/>
+  <rect x="20" y="20" width="1060" height="36" rx="14" fill="#0b1220"/>
+  <rect x="20" y="42" width="1060" height="14" fill="#0b1220"/>
+  <circle cx="44" cy="38" r="6" fill="#f87171"/><circle cx="64" cy="38" r="6" fill="#fbbf24"/><circle cx="84" cy="38" r="6" fill="#34d399"/>
+  <text x="550" y="43" text-anchor="middle" fill="#94a3b8" font-family="DejaVu Sans, sans-serif" font-size="13">feat/auth  —  Visual Studio Code</text>
+  <rect x="20" y="56" width="52" height="564" fill="#020617"/>
+  <rect x="28" y="120" width="36" height="36" rx="8" fill="#ea580c"/>
+  <circle cx="58" cy="126" r="8" fill="#ef4444"/><text x="58" y="130" text-anchor="middle" fill="#fff" font-size="9" font-family="DejaVu Sans, sans-serif">3</text>
+  <rect x="72" y="56" width="310" height="564" fill="#0b1220"/>
+  <text x="88" y="84" fill="#e2e8f0" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700">SOURCE CONTROL</text>
+  <rect x="88" y="100" width="278" height="44" rx="8" fill="#111827" stroke="#f97316"/>
+  <text x="102" y="128" fill="#fdba74" font-family="DejaVu Sans Mono, monospace" font-size="12">feat(auth): add JWT refresh flow</text>
+  <rect x="88" y="154" width="278" height="36" rx="8" fill="#ea580c"/>
+  <text x="227" y="177" text-anchor="middle" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700">Commit  ·  Ctrl+Enter</text>
+  <text x="88" y="216" fill="#94a3b8" font-family="DejaVu Sans, sans-serif" font-size="11">STAGED CHANGES</text>
+  <rect x="88" y="226" width="278" height="36" rx="8" fill="#14532d"/>
+  <text x="104" y="249" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="12">M   src/auth.ts</text>
+  <text x="88" y="286" fill="#94a3b8" font-family="DejaVu Sans, sans-serif" font-size="11">CHANGES</text>
+  <rect x="88" y="296" width="278" height="36" rx="8" fill="#1e293b"/>
+  <text x="104" y="319" fill="#fdba74" font-family="DejaVu Sans Mono, monospace" font-size="12">M   src/api.ts</text>
+  <rect x="88" y="338" width="278" height="36" rx="8" fill="#1e293b"/>
+  <text x="104" y="361" fill="#7dd3fc" font-family="DejaVu Sans Mono, monospace" font-size="12">U   README.md</text>
+  <text x="88" y="400" fill="#64748b" font-family="DejaVu Sans, sans-serif" font-size="11">Stage Selected Ranges = git add -p</text>
+  <!-- diff -->
+  <rect x="382" y="56" width="698" height="528" fill="#0f172a"/>
+  <rect x="382" y="56" width="698" height="32" fill="#020617"/>
+  <text x="400" y="77" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="12">src/auth.ts  +24  −6</text>
+  <rect x="398" y="104" width="666" height="28" fill="#052e16"/>
+  <text x="410" y="123" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="13">+  export async function rotateToken(t: string) {</text>
+  <rect x="398" y="132" width="666" height="28" fill="#052e16"/>
+  <text x="410" y="151" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="13">+    const next = await api.refresh(t);</text>
+  <rect x="398" y="160" width="666" height="28" fill="#052e16"/>
+  <text x="410" y="179" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="13">+    return next;</text>
+  <rect x="398" y="188" width="666" height="28" fill="#052e16"/>
+  <text x="410" y="207" fill="#86efac" font-family="DejaVu Sans Mono, monospace" font-size="13">+  }</text>
+  <rect x="398" y="228" width="666" height="28" fill="#450a0a"/>
+  <text x="410" y="247" fill="#fca5a5" font-family="DejaVu Sans Mono, monospace" font-size="13">-  return token;</text>
+  <rect x="398" y="256" width="666" height="28" fill="#1e293b"/>
+  <text x="410" y="275" fill="#94a3b8" font-family="DejaVu Sans Mono, monospace" font-size="13">   export function login(user: User) { ... }</text>
+  <rect x="382" y="584" width="698" height="36" fill="#ea580c"/>
+  <text x="400" y="607" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="13">⎇  feat/auth  ↑ 1</text>
+  <text x="560" y="607" fill="#ffedd5" font-family="DejaVu Sans, sans-serif" font-size="12">3 changes  ·  1 staged</text>
+</svg>

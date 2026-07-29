@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640">
+  <rect width="1100" height="640" rx="18" fill="#0d1117"/>
+  <text x="36" y="48" fill="#e6edf3" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">CI</text>
+  <text x="90" y="48" fill="#8b949e" font-family="DejaVu Sans, sans-serif" font-size="14">.github/workflows/ci.yml   ·   pull_request</text>
+  <rect x="36" y="72" width="80" height="24" rx="12" fill="#238636"/>
+  <text x="76" y="89" text-anchor="middle" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="12">Success</text>
+  <text x="132" y="90" fill="#8b949e" font-family="DejaVu Sans, sans-serif" font-size="13">Run #128  ·  feat/auth  ·  1m 12s</text>
+  <!-- pipeline -->
+  <rect x="36" y="130" width="200" height="90" rx="12" fill="#161b22" stroke="#238636"/>
+  <text x="136" y="168" text-anchor="middle" fill="#3fb950" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">✓ lint</text>
+  <text x="136" y="194" text-anchor="middle" fill="#8b949e" font-family="DejaVu Sans Mono, monospace" font-size="12">12s</text>
+  <line x1="236" y1="175" x2="276" y2="175" stroke="#238636" stroke-width="3"/>
+  <rect x="276" y="130" width="200" height="90" rx="12" fill="#161b22" stroke="#238636"/>
+  <text x="376" y="168" text-anchor="middle" fill="#3fb950" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">✓ test</text>
+  <text x="376" y="194" text-anchor="middle" fill="#8b949e" font-family="DejaVu Sans Mono, monospace" font-size="12">38s</text>
+  <line x1="476" y1="175" x2="516" y2="175" stroke="#238636" stroke-width="3"/>
+  <rect x="516" y="130" width="200" height="90" rx="12" fill="#161b22" stroke="#238636"/>
+  <text x="616" y="168" text-anchor="middle" fill="#3fb950" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">✓ build</text>
+  <text x="616" y="194" text-anchor="middle" fill="#8b949e" font-family="DejaVu Sans Mono, monospace" font-size="12">22s</text>
+  <line x1="716" y1="175" x2="756" y2="175" stroke="#238636" stroke-width="3"/>
+  <rect x="756" y="130" width="220" height="90" rx="12" fill="#0e4429" stroke="#3fb950"/>
+  <text x="866" y="168" text-anchor="middle" fill="#3fb950" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">required checks</text>
+  <text x="866" y="194" text-anchor="middle" fill="#8b949e" font-family="DejaVu Sans, sans-serif" font-size="12">Ruleset on main</text>
+  <!-- log -->
+  <rect x="36" y="250" width="1028" height="360" rx="12" fill="#010409" stroke="#21262d"/>
+  <text x="56" y="284" fill="#8b949e" font-family="DejaVu Sans Mono, monospace" font-size="12">job: test</text>
+  <g font-family="DejaVu Sans Mono, monospace" font-size="13">
+    <text x="56" y="320" fill="#3fb950">✓  Set up job</text>
+    <text x="56" y="348" fill="#3fb950">✓  actions/checkout@v4</text>
+    <text x="56" y="376" fill="#3fb950">✓  actions/setup-python@v5</text>
+    <text x="56" y="404" fill="#3fb950">✓  pip install -r src/requirements.txt</text>
+    <text x="56" y="432" fill="#3fb950">✓  python src/build.py --html</text>
+    <text x="56" y="460" fill="#8b949e">  HTML written (243 KB)</text>
+    <text x="56" y="500" fill="#3fb950">✓  Complete job</text>
+  </g>
+</svg>

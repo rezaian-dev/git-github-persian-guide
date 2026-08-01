@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" width="860" height="280">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/><stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/><stop offset="100%" stop-color="#cffafe"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/><stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="280" rx="18" fill="#0f172a"/>
+  <text x="430" y="36" text-anchor="middle" fill="#fdba74" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">Git three trees</text>
+  <!-- boxes -->
+  <rect x="40" y="64" width="220" height="170" rx="14" fill="url(#g1)" stroke="#fb923c" stroke-width="2"/>
+  <rect x="320" y="64" width="220" height="170" rx="14" fill="url(#g2)" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="600" y="64" width="220" height="170" rx="14" fill="url(#g3)" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="94" text-anchor="middle" fill="#9a3412" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">1. Working Tree</text>
+  <text x="430" y="94" text-anchor="middle" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">2. Index / Staging</text>
+  <text x="710" y="94" text-anchor="middle" fill="#166534" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">3. Repository</text>
+  <text x="150" y="122" text-anchor="middle" fill="#7c2d12" font-family="DejaVu Sans, sans-serif" font-size="12">files on disk</text>
+  <text x="430" y="122" text-anchor="middle" fill="#164e63" font-family="DejaVu Sans, sans-serif" font-size="12">next commit draft</text>
+  <text x="710" y="122" text-anchor="middle" fill="#14532d" font-family="DejaVu Sans, sans-serif" font-size="12">immutable object history</text>
+  <text x="150" y="168" text-anchor="middle" fill="#431407" font-family="DejaVu Sans Mono, monospace" font-size="11">auth.ts  ·  README.md</text>
+  <text x="430" y="168" text-anchor="middle" fill="#083344" font-family="DejaVu Sans Mono, monospace" font-size="11">staged: auth.ts</text>
+  <text x="710" y="168" text-anchor="middle" fill="#052e16" font-family="DejaVu Sans Mono, monospace" font-size="11">commit 9f3a…  HEAD</text>
+  <text x="150" y="204" text-anchor="middle" fill="#9a3412" font-family="DejaVu Sans Mono, monospace" font-size="11">git add</text>
+  <text x="430" y="204" text-anchor="middle" fill="#155e75" font-family="DejaVu Sans Mono, monospace" font-size="11">git commit</text>
+  <text x="710" y="204" text-anchor="middle" fill="#166534" font-family="DejaVu Sans Mono, monospace" font-size="11">git log / show</text>
+  <!-- arrows -->
+  <path d="M262 140 L316 140" stroke="#fdba74" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <path d="M542 140 L596 140" stroke="#67e8f9" stroke-width="3" fill="none"/>
+  <polygon points="310,134 322,140 310,146" fill="#fdba74"/>
+  <polygon points="590,134 602,140 590,146" fill="#67e8f9"/>
+</svg>

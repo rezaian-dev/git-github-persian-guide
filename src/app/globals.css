@@ -202,9 +202,13 @@
     mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   }
 
-  /* tilt-card glare layer */
+  /* tilt-card glare layer
+     The glare sits on top of the card, so it must clip to the same radius.
+     `rounded-[inherit]` would inherit from the transform wrapper (radius 0)
+     and leave visible square corners while tilting — pin the radius here. */
   .tilt-glare {
-    @apply pointer-events-none absolute inset-0 rounded-[inherit];
+    @apply pointer-events-none absolute inset-0 z-10;
+    border-radius: var(--radius);
   }
   .tilt-glare + * { @apply relative; }
 }

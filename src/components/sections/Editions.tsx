@@ -42,7 +42,7 @@ export default function Editions() {
                     <p className="text-[13px] leading-6 text-muted-foreground">{e.text}</p>
                     <p className="mt-3 text-xs font-bold text-sub">{e.meta}</p>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter className="mt-auto">
                     <Button asChild size="sm" className="w-full">
                       <a
                         href={e.href}

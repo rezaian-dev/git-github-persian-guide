@@ -3,6 +3,8 @@
 import { m, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 
+import { cn } from "@/lib/utils";
+
 /** Card that tilts in 3D toward the cursor, with a moving glare highlight. */
 export default function TiltCard({
   children,
@@ -32,10 +34,13 @@ export default function TiltCard({
   });
 
   return (
-    <div style={{ perspective: 900 }}>
+    // h-full must be on BOTH the perspective wrapper and the motion div,
+    // otherwise the grid's stretch never reaches the Card and siblings in a
+    // row end up with different heights.
+    <div className="h-full" style={{ perspective: 900 }}>
       <m.div
         ref={ref}
-        className={className}
+        className={cn("h-full", className)}
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         onMouseMove={(e) => {
           const r = ref.current?.getBoundingClientRect();
@@ -48,7 +53,7 @@ export default function TiltCard({
           my.set(0.5);
         }}
       >
-        <m.span className="tilt-glare" style={{ background: glare }} aria-hidden="true" />
+        <m.span className="tilt-glare rounded-2xl" style={{ background: glare }} aria-hidden="true" />
         {children}
       </m.div>
     </div>

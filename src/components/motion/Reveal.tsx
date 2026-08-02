@@ -2,6 +2,8 @@
 
 import { m } from "motion/react";
 
+import { cn } from "@/lib/utils";
+
 export default function Reveal({
   children,
   delay = 0,
@@ -13,7 +15,8 @@ export default function Reveal({
 }) {
   return (
     <m.div
-      className={className}
+      // h-full so a Reveal used as a grid item passes stretch down to the card
+      className={cn("h-full", className)}
       initial={{ opacity: 0, y: 26 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}

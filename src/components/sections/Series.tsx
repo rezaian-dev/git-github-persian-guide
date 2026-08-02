@@ -27,7 +27,7 @@ export default function Series() {
             <Reveal key={s.badge} delay={i * 0.07}>
               <TiltCard className="h-full">
                 <Card className={cn("h-full", s.current && "border-primary/50 bg-linear-to-br from-primary/15 to-sky/5")}>
-                  <CardContent className="flex flex-1 flex-col gap-3 pt-6">
+                  <CardContent className="flex h-full flex-1 flex-col gap-3 pt-6">
                     <span dir="ltr" className="grid size-11 place-items-center rounded-[13px] border border-input bg-secondary/50 font-mono text-[13px] font-extrabold text-primary-soft">
                       {s.badge}
                     </span>

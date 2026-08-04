@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 # repo (npm run build:pages), so this workflow only needs to upload it.
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:

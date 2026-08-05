@@ -264,8 +264,11 @@ python book/build_site.py        # دارایی‌های GitHub Pages
 npm install
 npm run dev          # http://localhost:3000
 npm run build        # بیلد پروداکشن (Vercel)
-npm run build:pages  # خروجی استاتیک برای GitHub Pages در docs/
+npm run build:pages  # خروجی استاتیک در docs/ — همان چیزی که GitHub Pages منتشر می‌کند
 ```
+
+> 📌 GitHub Pages مستقیماً پوشهٔ `docs/` روی شاخهٔ `master` را سرو می‌کند؛ بنابراین
+> بعد از هر بار `npm run build:pages` کافی است تغییرات `docs/` را کامیت کنید.
 
 مشارکت شما خوش‌آمد است 🙌 — Pull Request بهتر است کوچک، متمرکز و با دلیل تغییر باشد.
 

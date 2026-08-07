@@ -11,6 +11,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import cairosvg
 import pypdfium2 as pdfium
 
+from reader_select import READER_JS, new_nav
+
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 DOCS = REPO / "docs"
@@ -266,16 +268,11 @@ def copy_book() -> None:
         shutil.rmtree(BOOK)
     BOOK.mkdir(parents=True)
     html = html_src.read_text(encoding="utf-8")
-    web_css = (ROOT / "style-web.css").read_text(encoding="utf-8")
-    nav = """
-<nav class="web-bar" aria-label="نوار نسخه آنلاین">
-  <a href="../">بازگشت به سایت</a>
-  <span>نسخه آنلاین HTML · ویرایش ۱.۰.۰</span>
-  <a href="../pdf/Git-GitHub-Persian-Guide.pdf">دانلود PDF</a>
-</nav>
-"""
+    web_css = (ROOT / "style-web.css").read_text(encoding="utf-8") + SELECT_CSS
+    nav = new_nav(html)
     html = html.replace("<body>", "<body class=\"web-edition\">" + nav, 1)
     html = html.replace("</head>", f"<style>{web_css}</style>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>", 1)
+    html = html.replace("</body>", f"<script>{READER_JS}</script>\n</body>", 1)
     (BOOK / "index.html").write_text(html, encoding="utf-8")
     for name in ("cover-bg.jpg", "git-icon.svg", "github-mark.svg", "author-sq.png"):
         shutil.copy2(ROOT / name, BOOK / name)

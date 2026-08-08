@@ -415,11 +415,55 @@ body.web-edition {
 }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* --- chapter select (shadcn/ui Select, vanilla) --- */
+html { scroll-padding-top: 70px; }
+.bar-c { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.select { position: relative; }
+.select-trigger { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 7px 11px;
+  font-family: inherit; font-size: 12.5px; font-weight: 700; color: #e2e8f0; cursor: pointer;
+  background: #16223a; border: 1px solid rgba(255, 255, 255, .16); border-radius: 9px;
+  transition: color .16s, border-color .16s }
+.select-trigger:hover { color: #fff; border-color: rgba(249, 115, 22, .65) }
+.select-trigger[aria-expanded="true"] { color: #fff; border-color: #f97316 }
+.select-value { max-width: 210px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.select-value.ph { color: #94a3b8; font-weight: 600 }
+.select-chevron { width: 15px; height: 15px; flex-shrink: 0; opacity: .75; transition: transform .18s }
+.select-trigger[aria-expanded="true"] .select-chevron { transform: rotate(180deg) }
+.select-pop { position: absolute; top: calc(100% + 8px); inset-inline-start: 0; z-index: 120;
+  width: min(380px, 88vw); max-height: min(64vh, 500px); overflow-y: auto; overscroll-behavior: contain;
+  padding: 6px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 13px; background: #0f172a;
+  box-shadow: 0 26px 64px rgba(2, 6, 23, .5); animation: pop .16s ease }
+.select-pop[hidden] { display: none }
+.select-pop::-webkit-scrollbar { width: 8px }
+.select-pop::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, .16); border-radius: 8px }
+@keyframes pop { from { opacity: 0; transform: translateY(-6px) scale(.98) } to { opacity: 1; transform: none } }
+.select-label { padding: 9px 10px 4px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #fb923c }
+.select-item { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 9px;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; color: #cbd5e1 }
+.select-item .n { font-family: var(--mono, ui-monospace, monospace); font-size: 10.5px; font-weight: 700; color: #fdba74 }
+.select-item .t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.select-item .t .ltr { display: inline }
+.select-item .check { width: 15px; height: 15px; visibility: hidden; color: #fb923c }
+.select-item.hl { background: rgba(255, 255, 255, .08); color: #fff }
+.select-item[aria-selected="true"] { color: #fff }
+.select-item[aria-selected="true"] .check { visibility: visible }
+@media (max-width: 640px) { .select { display: none } }
+</style>
 </head>
 <body class="web-edition">
 <nav class="web-bar" aria-label="نوار نسخه آنلاین">
   <a href="../">بازگشت به سایت</a>
-  <span>نسخه آنلاین HTML · ویرایش ۱.۰.۰</span>
+  <div class="bar-c">
+    <div class="select" id="jump">
+      <button type="button" class="select-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="پرش به فصل">
+        <span class="select-value ph">فهرست فصل‌ها…</span>
+        <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="select-pop" role="listbox" aria-label="پرش به فصل" hidden><div class="select-label">بخش یکم · بنیادها و مدل ذهنی Git</div><div class="select-item" role="option" id="jump-ch-01" data-value="#ch-01" aria-selected="false"><span class="n">۰۱</span><span class="t">معرفی Git و نقشه راه ۲۰۲۶ — از صفر تا Senior</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-02" data-value="#ch-02" aria-selected="false"><span class="n">۰۲</span><span class="t">نصب و هویت — ستاپ حرفه‌ای Git در ۲۰۲۶</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-03" data-value="#ch-03" aria-selected="false"><span class="n">۰۳</span><span class="t">سه درخت — Working Tree، Index و Repository</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-04" data-value="#ch-04" aria-selected="false"><span class="n">۰۴</span><span class="t">اولین مخزن — init تا log</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-05" data-value="#ch-05" aria-selected="false"><span class="n">۰۵</span><span class="t">اشیای Git — blob، tree، commit و hash</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-06" data-value="#ch-06" aria-selected="false"><span class="n">۰۶</span><span class="t">شاخه‌ها — اشاره‌گر، نه کپی</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-07" data-value="#ch-07" aria-selected="false"><span class="n">۰۷</span><span class="t">ادغام — fast-forward، merge commit و تعارض</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-08" data-value="#ch-08" aria-selected="false"><span class="n">۰۸</span><span class="t">Undo — restore، reset، revert و reflog</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-09" data-value="#ch-09" aria-selected="false"><span class="n">۰۹</span><span class="t">نادیده‌گرفتن و فایل بزرگ — gitignore، attributes، LFS</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-10" data-value="#ch-10" aria-selected="false"><span class="n">۱۰</span><span class="t">Source Control از صفر — Ctrl+Shift+G</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-label">بخش دوم · کار روزانه، VS Code و GitHub</div><div class="select-item" role="option" id="jump-ch-11" data-value="#ch-11" aria-selected="false"><span class="n">۱۱</span><span class="t">Source Control فوق‌پیشرفته — Graph تا PR</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-12" data-value="#ch-12" aria-selected="false"><span class="n">۱۲</span><span class="t">دیدن تغییر — diff، log، blame و bisect</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-13" data-value="#ch-13" aria-selected="false"><span class="n">۱۳</span><span class="t">کار موازی — stash، worktree و sparse-checkout</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-14" data-value="#ch-14" aria-selected="false"><span class="n">۱۴</span><span class="t">Remote — fetch، pull، push و tracking</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-15" data-value="#ch-15" aria-selected="false"><span class="n">۱۵</span><span class="t">GitHub — ریپو، README و چهرهٔ عمومی پروژه</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-16" data-value="#ch-16" aria-selected="false"><span class="n">۱۶</span><span class="t">Clone، Fork و Upstream — ورود به کد دیگران</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-17" data-value="#ch-17" aria-selected="false"><span class="n">۱۷</span><span class="t">Pull Request — دروازهٔ کیفیت تیم</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-18" data-value="#ch-18" aria-selected="false"><span class="n">۱۸</span><span class="t">Code Review — فرهنگ، نه گیر دادن</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-19" data-value="#ch-19" aria-selected="false"><span class="n">۱۹</span><span class="t">GitHub CLI — <code>gh</code> به‌جای کلیک اضافه</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-20" data-value="#ch-20" aria-selected="false"><span class="n">۲۰</span><span class="t">Issues، Projects و Discussions — کار تیمی روی GitHub</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-21" data-value="#ch-21" aria-selected="false"><span class="n">۲۱</span><span class="t">استراتژی شاخه — GitHub Flow تا Trunk-Based</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-22" data-value="#ch-22" aria-selected="false"><span class="n">۲۲</span><span class="t">Conventional Commits — پیام به‌عنوان API</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-label">بخش سوم · پیشرفته، امنیت، CI و Production</div><div class="select-item" role="option" id="jump-ch-23" data-value="#ch-23" aria-selected="false"><span class="n">۲۳</span><span class="t">Rebase تعاملی — بازنویسی تاریخچه مثل مجسمه‌ساز</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-24" data-value="#ch-24" aria-selected="false"><span class="n">۲۴</span><span class="t">Cherry-pick، revert پیشرفته و rerere</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-25" data-value="#ch-25" aria-selected="false"><span class="n">۲۵</span><span class="t">Hooks و کیفیت کامیت — lint قبل از push</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-26" data-value="#ch-26" aria-selected="false"><span class="n">۲۶</span><span class="t">هویت و راز — امضا، 2FA، passkey و secret</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-27" data-value="#ch-27" aria-selected="false"><span class="n">۲۷</span><span class="t">Rulesets — سیاست شاخه در سطح سازمان</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-28" data-value="#ch-28" aria-selected="false"><span class="n">۲۸</span><span class="t">GitHub Actions — از رویداد تا استقرار</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-29" data-value="#ch-29" aria-selected="false"><span class="n">۲۹</span><span class="t">امنیت زنجیرهٔ تأمین — Dependabot، CodeQL، Secret Scanning</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-30" data-value="#ch-30" aria-selected="false"><span class="n">۳۰</span><span class="t">داخلی Git — packfile، gc، fsck و reftable</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-31" data-value="#ch-31" aria-selected="false"><span class="n">۳۱</span><span class="t">مخازن بزرگ — partial clone، Scalar و monorepo</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-32" data-value="#ch-32" aria-selected="false"><span class="n">۳۲</span><span class="t">Copilot و Coding Agent — Git در عصر عامل‌ها</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-label">بخش چهارم · کارگاه، نکات طلایی و مصاحبه</div><div class="select-item" role="option" id="jump-ch-33" data-value="#ch-33" aria-selected="false"><span class="n">۳۳</span><span class="t">۳۰ نکته و ترفند طلایی Git و GitHub</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-34" data-value="#ch-34" aria-selected="false"><span class="n">۳۴</span><span class="t">کارگاه — چهار مینی‌پروژه از صفر تا PR</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-35" data-value="#ch-35" aria-selected="false"><span class="n">۳۵</span><span class="t">۲۰ اشتباه رایج و راه‌حل</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div class="select-item" role="option" id="jump-ch-36" data-value="#ch-36" aria-selected="false"><span class="n">۳۶</span><span class="t">مصاحبه، واژه‌نامه و نقشه راه بعد از کتاب</span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div></div>
+    </div>
+    <span>نسخه آنلاین HTML · ویرایش ۱.۰.۰</span>
+  </div>
   <a href="../pdf/Git-GitHub-Persian-Guide.pdf">دانلود PDF</a>
 </nav>
 
@@ -4477,4 +4521,62 @@ gh<span style="color: #F8F8F2"> </span>repo<span style="color: #F8F8F2"> </span>
   </div>
 </section>
 
+<script>(() => {
+  const root = document.getElementById('jump');
+  if (!root) return;
+  const trigger = root.querySelector('.select-trigger');
+  const value = root.querySelector('.select-value');
+  const pop = root.querySelector('.select-pop');
+  const items = [...root.querySelectorAll('.select-item')];
+  let hl = -1;
+  const setHl = (i) => {
+    hl = i;
+    items.forEach((it, k) => it.classList.toggle('hl', k === i));
+    if (i >= 0) {
+      // scroll the highlighted row inside the popover only — never the page
+      const el = items[i], t = el.offsetTop, b = t + el.offsetHeight;
+      if (t < pop.scrollTop) pop.scrollTop = t - 8;
+      else if (b > pop.scrollTop + pop.clientHeight) pop.scrollTop = b - pop.clientHeight + 8;
+    }
+  };
+  const setOpen = (o) => {
+    pop.hidden = !o;
+    trigger.setAttribute('aria-expanded', o ? 'true' : 'false');
+    if (o) {
+      const cur = items.findIndex((it) => it.getAttribute('aria-selected') === 'true');
+      setHl(cur >= 0 ? cur : 0);
+    } else setHl(-1);
+  };
+  const pick = (it) => {
+    items.forEach((o) => o.setAttribute('aria-selected', o === it ? 'true' : 'false'));
+    value.textContent = it.querySelector('.t').textContent;
+    value.classList.remove('ph');
+    setOpen(false);
+    trigger.focus();
+    history.replaceState(null, '', it.dataset.value);
+    document.querySelector(it.dataset.value)?.scrollIntoView({ block: 'start' });
+  };
+  trigger.addEventListener('click', () => setOpen(pop.hidden));
+  items.forEach((it) => {
+    it.addEventListener('click', () => pick(it));
+    it.addEventListener('mousemove', () => setHl(items.indexOf(it)));
+  });
+  document.addEventListener('pointerdown', (e) => {
+    if (!pop.hidden && !root.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (pop.hidden) {
+      if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && document.activeElement === trigger) {
+        e.preventDefault(); setOpen(true);
+      }
+      return;
+    }
+    if (e.key === 'Escape') { setOpen(false); trigger.focus(); }
+    else if (e.key === 'ArrowDown') { e.preventDefault(); setHl((hl + 1) % items.length); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setHl((hl - 1 + items.length) % items.length); }
+    else if (e.key === 'Home') { e.preventDefault(); setHl(0); }
+    else if (e.key === 'End') { e.preventDefault(); setHl(items.length - 1); }
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (items[hl]) pick(items[hl]); }
+  });
+})();</script>
 </body></html>

@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://rezaian-dev.github.io/git-github-persian-guide/">
-    <img src="./docs/assets/web/readme-hero-architecture.webp" alt="Git & GitHub 2026 — Persian Developer Handbook" width="880">
+    <img src="./assets/readme-hero-architecture.webp" alt="Git & GitHub 2026 — Persian Developer Handbook" width="880">
   </a>
 </p>
 
@@ -16,9 +16,9 @@
 
 <p align="center">
   <a href="https://rezaian-dev.github.io/git-github-persian-guide/"><img src="https://img.shields.io/badge/📖_READ_ONLINE-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" alt="مطالعه آنلاین"></a>
-  <a href="https://rezaian-dev.github.io/git-github-persian-guide/book/"><img src="https://img.shields.io/badge/🌐_HTML_EDITION-F97316?style=for-the-badge&logo=git&logoColor=white" alt="نسخه HTML"></a>
-  <a href="./docs/pdf/Git-GitHub-Persian-Guide.pdf"><img src="https://img.shields.io/badge/⬇️_DOWNLOAD_PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="دانلود PDF"></a>
-  <a href="./docs/pdf/Git-GitHub-Persian-Guide.epub"><img src="https://img.shields.io/badge/📱_DOWNLOAD_EPUB-7C3AED?style=for-the-badge&logo=applebooks&logoColor=white" alt="دانلود EPUB"></a>
+  <a href="https://rezaian-dev.github.io/git-github-persian-guide/book"><img src="https://img.shields.io/badge/🌐_ONLINE_READER-F97316?style=for-the-badge&logo=git&logoColor=white" alt="ریدر آنلاین"></a>
+  <a href="./public/pdf/Git-GitHub-Persian-Guide.pdf"><img src="https://img.shields.io/badge/⬇️_DOWNLOAD_PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="دانلود PDF"></a>
+  <a href="./public/pdf/Git-GitHub-Persian-Guide.epub"><img src="https://img.shields.io/badge/📱_DOWNLOAD_EPUB-7C3AED?style=for-the-badge&logo=applebooks&logoColor=white" alt="دانلود EPUB"></a>
 </p>
 
 <p align="center">
@@ -107,60 +107,60 @@ rebase، hooks، امضا، Rulesets، Actions و زنجیرهٔ تأمین.
 <summary><strong>🌱 گام اول — بنیادها و مدل ذهنی</strong> · فصل‌های ۱ تا ۱۰</summary>
 
 
-1. [معرفی Git و نقشه راه ۲۰۲۶](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-01)
-2. [نصب و هویت](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-02)
-3. [سه درخت](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-03)
-4. [اولین مخزن](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-04)
-5. [اشیای Git](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-05)
-6. [شاخه‌ها](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-06)
-7. [ادغام و تعارض](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-07)
-8. [Undo](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-08)
-9. [gitignore، attributes، LFS](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-09)
-10. [Source Control از صفر — Ctrl+Shift+G](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-10)
+1. [معرفی Git و نقشه راه ۲۰۲۶](https://rezaian-dev.github.io/git-github-persian-guide/book1)
+2. [نصب و هویت](https://rezaian-dev.github.io/git-github-persian-guide/book2)
+3. [سه درخت](https://rezaian-dev.github.io/git-github-persian-guide/book3)
+4. [اولین مخزن](https://rezaian-dev.github.io/git-github-persian-guide/book4)
+5. [اشیای Git](https://rezaian-dev.github.io/git-github-persian-guide/book5)
+6. [شاخه‌ها](https://rezaian-dev.github.io/git-github-persian-guide/book6)
+7. [ادغام و تعارض](https://rezaian-dev.github.io/git-github-persian-guide/book7)
+8. [Undo](https://rezaian-dev.github.io/git-github-persian-guide/book8)
+9. [gitignore، attributes، LFS](https://rezaian-dev.github.io/git-github-persian-guide/book9)
+10. [Source Control از صفر — Ctrl+Shift+G](https://rezaian-dev.github.io/git-github-persian-guide/book10)
 
 </details>
 
 <details>
 <summary><strong>🔁 گام دوم — کار روزانه، VS Code و GitHub</strong> · فصل‌های ۱۱ تا ۲۲</summary>
 
-11. [Source Control فوق‌پیشرفته](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-11)
-12. [diff، log، blame، bisect](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-12)
-13. [stash، worktree، sparse-checkout](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-13)
-14. [Remote](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-14)
-15. [ریپوی GitHub](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-15)
-16. [Clone، Fork و Upstream](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-16)
-17. [Pull Request](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-17)
-18. [Code Review](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-18)
-19. [GitHub CLI](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-19)
-20. [Issues و Projects](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-20)
-21. [استراتژی شاخه](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-21)
-22. [Conventional Commits](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-22)
+11. [Source Control فوق‌پیشرفته](https://rezaian-dev.github.io/git-github-persian-guide/book11)
+12. [diff، log، blame، bisect](https://rezaian-dev.github.io/git-github-persian-guide/book12)
+13. [stash، worktree، sparse-checkout](https://rezaian-dev.github.io/git-github-persian-guide/book13)
+14. [Remote](https://rezaian-dev.github.io/git-github-persian-guide/book14)
+15. [ریپوی GitHub](https://rezaian-dev.github.io/git-github-persian-guide/book15)
+16. [Clone، Fork و Upstream](https://rezaian-dev.github.io/git-github-persian-guide/book16)
+17. [Pull Request](https://rezaian-dev.github.io/git-github-persian-guide/book17)
+18. [Code Review](https://rezaian-dev.github.io/git-github-persian-guide/book18)
+19. [GitHub CLI](https://rezaian-dev.github.io/git-github-persian-guide/book19)
+20. [Issues و Projects](https://rezaian-dev.github.io/git-github-persian-guide/book20)
+21. [استراتژی شاخه](https://rezaian-dev.github.io/git-github-persian-guide/book21)
+22. [Conventional Commits](https://rezaian-dev.github.io/git-github-persian-guide/book22)
 
 </details>
 
 <details>
 <summary><strong>🚀 گام سوم — پیشرفته، امنیت و CI</strong> · فصل‌های ۲۳ تا ۳۲</summary>
 
-23. [Rebase تعاملی](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-23)
-24. [Cherry-pick و rerere](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-24)
-25. [Hooks](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-25)
-26. [امضا و راز](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-26)
-27. [Rulesets](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-27)
-28. [GitHub Actions](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-28)
-29. [امنیت زنجیرهٔ تأمین](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-29)
-30. [داخلی Git](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-30)
-31. [مخازن بزرگ](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-31)
-32. [Copilot و Coding Agent](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-32)
+23. [Rebase تعاملی](https://rezaian-dev.github.io/git-github-persian-guide/book23)
+24. [Cherry-pick و rerere](https://rezaian-dev.github.io/git-github-persian-guide/book24)
+25. [Hooks](https://rezaian-dev.github.io/git-github-persian-guide/book25)
+26. [امضا و راز](https://rezaian-dev.github.io/git-github-persian-guide/book26)
+27. [Rulesets](https://rezaian-dev.github.io/git-github-persian-guide/book27)
+28. [GitHub Actions](https://rezaian-dev.github.io/git-github-persian-guide/book28)
+29. [امنیت زنجیرهٔ تأمین](https://rezaian-dev.github.io/git-github-persian-guide/book29)
+30. [داخلی Git](https://rezaian-dev.github.io/git-github-persian-guide/book30)
+31. [مخازن بزرگ](https://rezaian-dev.github.io/git-github-persian-guide/book31)
+32. [Copilot و Coding Agent](https://rezaian-dev.github.io/git-github-persian-guide/book32)
 
 </details>
 
 <details>
 <summary><strong>🏁 گام چهارم — کارگاه و آمادگی شغلی</strong> · فصل‌های ۳۳ تا ۳۶</summary>
 
-33. [۳۰ نکته طلایی](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-33)
-34. [کارگاه چهار مینی‌پروژه](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-34)
-35. [۲۰ اشتباه رایج](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-35)
-36. [مصاحبه، واژه‌نامه و نقشه راه](https://rezaian-dev.github.io/git-github-persian-guide/book/#ch-36)
+33. [۳۰ نکته طلایی](https://rezaian-dev.github.io/git-github-persian-guide/book33)
+34. [کارگاه چهار مینی‌پروژه](https://rezaian-dev.github.io/git-github-persian-guide/book34)
+35. [۲۰ اشتباه رایج](https://rezaian-dev.github.io/git-github-persian-guide/book35)
+36. [مصاحبه، واژه‌نامه و نقشه راه](https://rezaian-dev.github.io/git-github-persian-guide/book36)
 
 </details>
 
@@ -169,10 +169,10 @@ rebase، hooks، امضا، Rulesets، Actions و زنجیرهٔ تأمین.
 ## 🖼️ نگاهی به داخل
 
 <p align="center">
-  <a href="./docs/assets/page-toc.jpg"><img src="./docs/assets/web/preview-toc.webp" alt="فهرست مطالب" width="180"></a>
-  <a href="./docs/assets/page-chapter.jpg"><img src="./docs/assets/web/preview-chapter.webp" alt="ساختار فصل" width="180"></a>
-  <a href="./docs/assets/page-code.jpg"><img src="./docs/assets/web/preview-code.webp" alt="CLI و VS Code" width="180"></a>
-  <a href="./docs/assets/page-workshop.jpg"><img src="./docs/assets/web/preview-workshop.webp" alt="کارگاه" width="180"></a>
+  <a href="./public/page-toc.jpg"><img src="./public/preview-toc.webp" alt="فهرست مطالب" width="180"></a>
+  <a href="./public/page-chapter.jpg"><img src="./public/preview-chapter.webp" alt="ساختار فصل" width="180"></a>
+  <a href="./public/page-code.jpg"><img src="./public/preview-code.webp" alt="CLI و VS Code" width="180"></a>
+  <a href="./public/page-workshop.jpg"><img src="./public/preview-workshop.webp" alt="کارگاه" width="180"></a>
 </p>
 
 <a id="-نسخه‌های-آماده"></a>
@@ -184,9 +184,9 @@ rebase، hooks، امضا، Rulesets، Actions و زنجیرهٔ تأمین.
 | نسخه | مناسب برای | لینک |
 |---|---|---|
 | 🌐 **نسخهٔ آنلاین** | مطالعهٔ سریع در مرورگر | [rezaian-dev.github.io/git-github-persian-guide](https://rezaian-dev.github.io/git-github-persian-guide/) |
-| 📖 **نسخهٔ HTML کتاب** | خواندن کامل هر ۳۶ فصل | [کتاب HTML](https://rezaian-dev.github.io/git-github-persian-guide/book/) |
-| 📄 **PDF** | چاپ و مطالعهٔ آفلاین · ۱۴۵ صفحهٔ A4 رنگی | [دانلود PDF](./docs/pdf/Git-GitHub-Persian-Guide.pdf) |
-| 📱 **EPUB** | کتاب‌خوان و موبایل · راست‌به‌چپ | [دانلود EPUB](./docs/pdf/Git-GitHub-Persian-Guide.epub) |
+| 📖 **ریدر آنلاین** | خواندن کامل هر ۳۶ فصل داخل اپلیکیشن | [مطالعهٔ آنلاین](https://rezaian-dev.github.io/git-github-persian-guide/book) |
+| 📄 **PDF** | چاپ و مطالعهٔ آفلاین · ۱۴۵ صفحهٔ A4 رنگی | [دانلود PDF](./public/pdf/Git-GitHub-Persian-Guide.pdf) |
+| 📱 **EPUB** | کتاب‌خوان و موبایل · راست‌به‌چپ | [دانلود EPUB](./public/pdf/Git-GitHub-Persian-Guide.epub) |
 
 <a id="-مجموعه-راهنماها"></a>
 
@@ -239,36 +239,22 @@ rebase، hooks، امضا، Rulesets، Actions و زنجیرهٔ تأمین.
 
 <div dir="rtl">
 
-متن کتاب به‌صورت خصوصی نگهداری می‌شود و در این مخزن فقط **خروجی‌های منتشرشده** (PDF، EPUB و نسخهٔ آنلاین) قرار دارند. اسکریپت‌های ساخت در `book/` باقی مانده‌اند و در صورت وجود سورس فصل‌ها این‌طور اجرا می‌شوند:
-
-```bash
-git clone https://github.com/rezaian-dev/git-github-persian-guide.git
-cd git-github-persian-guide
-
-python -m venv .venv
-source .venv/bin/activate       # macOS / Linux
-# .venv\Scripts\Activate.ps1   # Windows PowerShell
-
-python -m pip install -r book/requirements.txt
-python book/build.py --html      # HTML داخلی
-python book/build.py             # PDF
-python book/build_epub.py        # EPUB
-python book/build_site.py        # دارایی‌های GitHub Pages
-```
-
-> نیازمند Python 3.10+ و وابستگی‌های سیستمی [WeasyPrint](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation) برای PDF.
+این مخزن یک اپلیکیشن خالص **Next.js** است: متن هر ۳۶ فصل به‌صورت ماژول‌های محتوا در `src/content/chapters` نگهداری می‌شود و ریدر آنلاین (`/book`) آن را به‌صورت کامپوننت رندر می‌کند. خروجی‌های آمادهٔ PDF و EPUB در `public/pdf` قرار دارند و شکل‌های کتاب در `public/book/figures`.
 
 **اجرای اپلیکیشن Next.js** (ریشهٔ مخزن، نیازمند Node.js ۲۰.۹+):
 
 ```bash
+git clone https://github.com/rezaian-dev/git-github-persian-guide.git
+cd git-github-persian-guide
 npm install
 npm run dev          # http://localhost:3000
 npm run build        # بیلد پروداکشن (Vercel)
-npm run build:pages  # خروجی استاتیک در docs/ — همان چیزی که GitHub Pages منتشر می‌کند
+npm run build:pages  # خروجی استاتیک در out/
 ```
 
-> 📌 GitHub Pages مستقیماً پوشهٔ `docs/` روی شاخهٔ `master` را سرو می‌کند؛ بنابراین
-> بعد از هر بار `npm run build:pages` کافی است تغییرات `docs/` را کامیت کنید.
+> 📌 انتشار روی GitHub Pages توسط [GitHub Action](.github/workflows/deploy-pages.yml) انجام می‌شود:
+> با هر پوش به `master`، بیلد استاتیک گرفته و مستقیم دیپلوی می‌شود — هیچ فایل خروجی‌ای در مخزن کامیت نمی‌شود.
+> کافی است در Settings → Pages گزینهٔ **Source** روی `GitHub Actions` باشد.
 
 مشارکت شما خوش‌آمد است 🙌 — Pull Request بهتر است کوچک، متمرکز و با دلیل تغییر باشد.
 

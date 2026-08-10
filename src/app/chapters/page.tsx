@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, ExternalLink } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 import Background from "@/components/layout/Background";
 import ScrollProgress from "@/components/layout/ScrollProgress";
@@ -33,13 +33,13 @@ export default function BookPage() {
             <span className="grad-text">۳۶ فصل</span> در چهار گام
           </h1>
           <p className="mt-3.5 text-base leading-8 text-muted-foreground">
-            هر بخش یک مرحله از مسیر است: از مدل ذهنی تا Production. روی هر فصل کلیک کنید تا مستقیم در نسخهٔ آنلاین کتاب باز شود.
+            هر بخش یک مرحله از مسیر است: از مدل ذهنی تا Production. روی هر فصل کلیک کنید تا مستقیم در ریدر آنلاین کتاب باز شود.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Button asChild>
-              <a href={BOOK_URL} target="_blank" rel="noopener">
-                <BookOpen /> مطالعهٔ کامل کتاب <ExternalLink />
-              </a>
+              <Link href={BOOK_URL}>
+                <BookOpen /> مطالعهٔ کامل کتاب
+              </Link>
             </Button>
             <Button asChild variant="outline">
               <Link href="/">
@@ -66,18 +66,16 @@ export default function BookPage() {
               </div>
               <CardContent className="grid gap-1.5 sm:grid-cols-2">
                 {part.chapters.map((c) => (
-                  <a
+                  <Link
                     key={c.n}
                     href={chapterUrl(c.n)}
-                    target="_blank"
-                    rel="noopener"
                     className="flex items-center gap-3 rounded-xl border border-transparent px-3.5 py-2.5 transition-colors hover:border-border hover:bg-secondary/40"
                   >
                     <span dir="ltr" className="grid size-7 shrink-0 place-items-center rounded-lg border border-primary/20 bg-primary/10 font-mono text-[11px] font-bold text-primary-soft">
                       {c.n}
                     </span>
                     <span className="text-[13.5px] text-sub">{c.title}</span>
-                  </a>
+                  </Link>
                 ))}
               </CardContent>
             </Card>

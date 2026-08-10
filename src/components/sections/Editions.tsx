@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { BookOpen, FileText, Smartphone } from "lucide-react";
 
 import SectionHeader from "@/components/layout/SectionHeader";
@@ -11,10 +12,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { BOOK_URL, PDF_URL, EPUB_URL, REPO_URL } from "@/lib/links";
 
 const EDITIONS = [
-  { icon: BookOpen, title: "نسخهٔ وب", text: "HTML راست‌به‌چپ؛ کل کتاب در یک صفحه، بدون دانلود.", meta: "۳۶ فصل · رایگان", href: BOOK_URL, cta: "مطالعه آنلاین", download: false, external: true },
-  { icon: FileText, title: "PDF", text: "A4 رنگی، قابل جست‌وجو و آمادهٔ چاپ.", meta: "۱۴۵ صفحه · A4", href: PDF_URL, cta: "دانلود PDF", download: true, external: false },
-  { icon: Smartphone, title: "EPUB", text: "بازچینش‌پذیر برای کتاب‌خوان و موبایل.", meta: "راست‌به‌چپ · موبایل", href: EPUB_URL, cta: "دانلود EPUB", download: true, external: false },
-  { icon: GitHubIcon, title: "مخزن پروژه", text: "کد سایت، ابزار ساخت و انتشار نسخه‌ها.", meta: "Next.js · Python", href: REPO_URL, cta: "مشاهده مخزن", download: false, external: true },
+  { icon: BookOpen, title: "نسخهٔ وب", text: "ریدر آنلاین داخل همین اپلیکیشن؛ راست‌به‌چپ و بدون دانلود.", meta: "۳۶ فصل · رایگان", href: BOOK_URL, cta: "مطالعه آنلاین", download: false, external: false, internal: true },
+  { icon: FileText, title: "PDF", text: "A4 رنگی، قابل جست‌وجو و آمادهٔ چاپ.", meta: "۱۴۵ صفحه · A4", href: PDF_URL, cta: "دانلود PDF", download: true, external: false, internal: false },
+  { icon: Smartphone, title: "EPUB", text: "بازچینش‌پذیر برای کتاب‌خوان و موبایل.", meta: "راست‌به‌چپ · موبایل", href: EPUB_URL, cta: "دانلود EPUB", download: true, external: false, internal: false },
+  { icon: GitHubIcon, title: "مخزن پروژه", text: "کد سایت و انتشار نسخه‌ها.", meta: "Next.js · TypeScript", href: REPO_URL, cta: "مشاهده مخزن", download: false, external: true, internal: false },
 ];
 
 export default function Editions() {
@@ -44,13 +45,17 @@ export default function Editions() {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <Button asChild size="sm" className="w-full">
-                      <a
-                        href={e.href}
-                        {...(e.download ? { download: true } : {})}
-                        {...(e.external ? { target: "_blank", rel: "noopener" } : {})}
-                      >
-                        {e.cta}
-                      </a>
+                      {e.internal ? (
+                        <Link href={e.href}>{e.cta}</Link>
+                      ) : (
+                        <a
+                          href={e.href}
+                          {...(e.download ? { download: true } : {})}
+                          {...(e.external ? { target: "_blank", rel: "noopener" } : {})}
+                        >
+                          {e.cta}
+                        </a>
+                      )}
                     </Button>
                   </CardFooter>
                 </Card>

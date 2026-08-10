@@ -1,0 +1,497 @@
+/* ============================================================
+   Book reader — the HTML edition restyled as part of the app.
+   Everything is scoped under `.reader` so the book's classes
+   never leak into the marketing pages.
+   ============================================================ */
+
+.reader {
+  direction: rtl;
+  text-align: right;
+  font-size: 15.5px;
+  line-height: 2.05;
+  color: var(--color-sub);
+  word-wrap: break-word;
+}
+
+.reader p {
+  margin: 0 0 14px;
+  text-align: justify;
+}
+
+.reader strong {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.reader em {
+  font-style: normal;
+  color: var(--primary-soft);
+  font-weight: 600;
+}
+
+.reader a {
+  color: var(--primary-soft);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgb(255 106 43 / 0.4);
+  transition: text-decoration-color 0.2s;
+}
+.reader a:hover {
+  text-decoration-color: var(--primary-soft);
+}
+
+.reader hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 30px 0;
+}
+
+.reader img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reader .ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  font-family: var(--font-mono);
+}
+
+/* ------------------------------------------------------------ lead */
+.reader .lead {
+  font-size: 17px;
+  line-height: 2.1;
+  color: var(--muted-foreground);
+  border-right: 3px solid var(--primary);
+  padding-right: 14px;
+  margin: 0 0 24px;
+}
+
+/* ------------------------------------------------------------ headings */
+.reader h2 {
+  margin: 36px 0 14px;
+}
+.reader h2 .hx {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: -4px 0;
+  padding: 9px 14px 9px 12px;
+  border-radius: 10px;
+  background: linear-gradient(to left, rgb(255 106 43 / 0.13), rgb(255 106 43 / 0) 85%);
+  border-right: 4px solid var(--primary);
+}
+.reader h2 .hx-t {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--foreground);
+  line-height: 1.7;
+}
+.reader h3 {
+  margin: 26px 0 10px;
+}
+.reader h3 .hx {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.reader h3 .hx-t {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.75;
+}
+
+/* ------------------------------------------------------------ lists */
+.reader ul,
+.reader ol {
+  margin: 6px 0 14px;
+  padding: 0 22px 0 0;
+}
+.reader ul {
+  list-style: none;
+}
+.reader ul > li {
+  position: relative;
+  margin: 0 0 7px;
+  padding-right: 2px;
+  text-align: justify;
+}
+.reader ul > li::before {
+  content: "☐";
+  position: absolute;
+  top: -1px;
+  right: -22px;
+  color: var(--primary);
+  font-size: 13px;
+}
+.reader ol {
+  list-style-type: persian;
+}
+.reader ol > li {
+  margin: 0 0 7px;
+  padding-right: 4px;
+  text-align: justify;
+}
+.reader ol > li::marker {
+  color: var(--primary);
+  font-weight: 700;
+}
+.reader li > ul,
+.reader li > ol {
+  margin: 4px 0 6px;
+}
+.reader li p {
+  margin: 0 0 5px;
+}
+
+/* ------------------------------------------------------------ inline code */
+.reader code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: rgb(255 106 43 / 0.12);
+  color: var(--primary-soft);
+  border: 1px solid rgb(255 106 43 / 0.16);
+  border-radius: 5px;
+  padding: 1px 6px;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-ligatures: none;
+}
+.reader .lead code {
+  font-size: 0.82em;
+}
+
+/* ------------------------------------------------------------ code windows */
+.reader .code {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #272822;
+  margin: 14px 0 18px;
+  direction: ltr;
+  border: 1px solid var(--border);
+}
+.reader .code-head {
+  background: var(--card);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  direction: ltr;
+  border-bottom: 1px solid rgb(255 255 255 / 0.06);
+}
+.reader .dots i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.reader .dots i:nth-child(1) { background: #f87171; }
+.reader .dots i:nth-child(2) { background: #fbbf24; }
+.reader .dots i:nth-child(3) { background: #34d399; }
+.reader .fname {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.reader .code pre {
+  margin: 0;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.75;
+  color: #f8f8f2;
+  direction: ltr;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  unicode-bidi: embed;
+}
+.reader .code pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+}
+
+/* ------------------------------------------------------------ tables */
+.reader .tbl-wrap {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 14px 0 18px;
+  background: rgb(255 255 255 / 0.02);
+}
+.reader table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.reader thead th {
+  background: linear-gradient(180deg, #ff7c40, var(--primary));
+  color: #231006;
+  font-weight: 800;
+  text-align: right;
+  padding: 9px 14px;
+  white-space: nowrap;
+}
+.reader tbody td {
+  padding: 9px 14px;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+  text-align: right;
+}
+.reader tbody tr:nth-child(even) td {
+  background: rgb(255 255 255 / 0.025);
+}
+.reader td code,
+.reader th code {
+  font-size: 12.5px;
+}
+.reader thead th code {
+  background: rgb(0 0 0 / 0.22);
+  color: #231006;
+  border-color: rgb(0 0 0 / 0.15);
+}
+
+/* ------------------------------------------------------------ callouts */
+.reader .callout {
+  border-radius: 12px;
+  padding: 13px 16px 8px;
+  margin: 16px 0 18px;
+  border: 1px solid var(--border);
+  border-right-width: 4px;
+  background: var(--card);
+}
+.reader .callout p,
+.reader .callout li {
+  font-size: 15px;
+  line-height: 1.95;
+}
+.reader .callout p {
+  margin: 0 0 8px;
+}
+.reader .callout ul,
+.reader .callout ol {
+  margin: 2px 0 8px;
+}
+.reader .callout .code {
+  margin: 10px 0 12px;
+}
+.reader .callout-title {
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+.reader .callout-title::before {
+  margin-left: 7px;
+  font-size: 0.95em;
+}
+.reader .callout-note .callout-title::before { content: "ℹ"; color: var(--color-sky); }
+.reader .callout-tip .callout-title::before { content: "✦"; color: #34d399; }
+.reader .callout-warn .callout-title::before { content: "⚠"; color: #fbbf24; }
+.reader .callout-danger .callout-title::before { content: "✖"; color: var(--destructive); }
+.reader .callout-interview .callout-title::before { content: "❝"; color: var(--color-violet); }
+.reader .callout-project .callout-title::before { content: "➤"; color: var(--primary); }
+.reader .callout-summary .callout-title::before { content: "≡"; color: var(--color-gold); }
+
+.reader .callout-note { background: rgb(86 200 250 / 0.06); border-right-color: var(--color-sky); }
+.reader .callout-tip { background: rgb(52 211 153 / 0.06); border-right-color: #34d399; }
+.reader .callout-warn { background: rgb(251 191 36 / 0.06); border-right-color: #fbbf24; }
+.reader .callout-danger { background: rgb(240 82 82 / 0.06); border-right-color: var(--destructive); }
+.reader .callout-interview { background: rgb(182 161 251 / 0.07); border-right-color: var(--color-violet); }
+.reader .callout-interview p strong:first-child { color: var(--color-violet); }
+.reader .callout-project { background: rgb(255 106 43 / 0.07); border-right-color: var(--primary); }
+.reader .callout-summary { background: rgb(255 219 163 / 0.06); border-right-color: var(--color-gold); }
+
+/* ------------------------------------------------------------ columns */
+.reader .cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 14px 0 18px;
+}
+.reader .col {
+  border-radius: 12px;
+  padding: 12px 14px 6px;
+  border: 1px solid;
+  font-size: 14px;
+  min-width: 0;
+}
+.reader .col p,
+.reader .col li {
+  font-size: 14px;
+  line-height: 1.95;
+}
+.reader .col .code {
+  margin: 6px 0 8px;
+}
+.reader .col .code pre {
+  font-size: 12px;
+  padding: 10px 12px;
+}
+.reader .col-title {
+  font-weight: 800;
+  font-size: 14.5px;
+  margin-bottom: 6px;
+}
+.reader .col:nth-child(odd) {
+  background: rgb(255 106 43 / 0.06);
+  border-color: rgb(255 106 43 / 0.25);
+}
+.reader .col:nth-child(odd) .col-title {
+  color: var(--primary-soft);
+}
+.reader .col:nth-child(even) {
+  background: rgb(182 161 251 / 0.06);
+  border-color: rgb(182 161 251 / 0.25);
+}
+.reader .col:nth-child(even) .col-title {
+  color: var(--color-violet);
+}
+.reader .col.good {
+  background: rgb(52 211 153 / 0.06) !important;
+  border-color: rgb(52 211 153 / 0.3) !important;
+}
+.reader .col.good .col-title {
+  color: #4ade80 !important;
+}
+.reader .col.bad {
+  background: rgb(240 82 82 / 0.06) !important;
+  border-color: rgb(240 82 82 / 0.3) !important;
+}
+.reader .col.bad .col-title {
+  color: #f87171 !important;
+}
+
+/* ------------------------------------------------------------ quote */
+.reader blockquote {
+  margin: 14px 0 18px;
+  padding: 10px 16px;
+  border-right: 3px solid var(--primary-soft);
+  background: rgb(255 106 43 / 0.06);
+  border-radius: 8px;
+  color: var(--color-sub);
+}
+.reader blockquote p {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------ figures */
+.reader .diagram {
+  margin: 18px 0 20px;
+  text-align: center;
+}
+.reader .diagram img {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 10px;
+}
+.reader .shot {
+  margin: 18px 0 20px;
+  text-align: center;
+}
+.reader .shot img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.reader .figcap {
+  font-size: 12.5px;
+  color: var(--muted-foreground);
+  margin-top: 8px;
+  line-height: 1.85;
+  text-align: center;
+}
+.reader .legend {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+
+/* ------------------------------------------------------------ closing */
+.reader .closing-card {
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 42px 30px;
+  max-width: 640px;
+  margin: 44px auto 0;
+  background: linear-gradient(180deg, rgb(255 106 43 / 0.08), var(--card) 70%);
+}
+.reader .closing-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--primary-soft);
+  margin-bottom: 12px;
+}
+.reader .closing-card h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--foreground);
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+.reader .closing-card > p {
+  text-align: center;
+  color: var(--muted-foreground);
+}
+.reader .closing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0;
+}
+.reader .closing-tags span {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  direction: ltr;
+  color: var(--color-sub);
+  border: 1px solid rgb(255 106 43 / 0.3);
+  background: rgb(255 106 43 / 0.08);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.reader .closing-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 28px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.reader .closing-links .lbl {
+  color: var(--color-faint);
+  margin-left: 6px;
+}
+.reader .closing-author {
+  margin-top: 18px;
+  font-size: 12.5px;
+  color: var(--color-faint);
+}
+
+/* ------------------------------------------------------------ responsive */
+@media (max-width: 720px) {
+  .reader {
+    font-size: 15px;
+  }
+  .reader .cols {
+    grid-template-columns: 1fr;
+  }
+  .reader h2 .hx-t {
+    font-size: 17.5px;
+  }
+  .reader .lead {
+    font-size: 15.5px;
+  }
+}

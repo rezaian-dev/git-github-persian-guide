@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://rezaian-dev.github.io/git-github-persian-guide/">
-    <img src="./assets/readme-hero-architecture.webp" alt="Git & GitHub 2026 — Persian Developer Handbook" width="880">
+    <img src="./assets/readme/readme-hero.webp" alt="Git & GitHub 2026 — Persian Developer Handbook" width="880">
   </a>
 </p>
 

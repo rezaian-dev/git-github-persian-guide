@@ -5,17 +5,11 @@ import { BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 
 import Background from "@/components/layout/Background";
 import ReaderBar from "@/components/book/ReaderBar";
+import ChapterArticle from "@/components/book/ChapterArticle";
 import { BOOK, CHAPTERS, CLOSING_HTML, chapterByN } from "@/content/book";
 import "../reader.css";
 
 const fa = new Intl.NumberFormat("fa-IR");
-
-/** مسیرهای فصل‌ها با basePath سازگار می‌شوند؛ تصاویر کتاب را همین‌جا پیشوندگذاری می‌کنیم. */
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-function withBase(html: string): string {
-  return html.replaceAll('src="/book/', `src="${BASE}/book/`);
-}
 
 export function generateStaticParams() {
   return CHAPTERS.map((c) => ({ n: String(c.n) }));
@@ -31,7 +25,7 @@ export async function generateMetadata({
   if (!ch) return {};
   return {
     title: `${ch.label} | Git و GitHub ۲۰۲۶`,
-    description: `${ch.title} — فصل ${fa.format(ch.n)} از ${fa.format(BOOK.totalChapters)} فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان و متن‌باز.`,
+    description: `${ch.title} — فصل ${fa.format(ch.n)} از ${fa.format(BOOK.totalChapters)} فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری.`,
   };
 }
 
@@ -85,11 +79,9 @@ export default async function ChapterPage({
           </div>
         </header>
 
-        <article className="reader" dangerouslySetInnerHTML={{ __html: withBase(ch.html) }} />
+        <ChapterArticle html={ch.html} />
 
-        {ch.n === BOOK.totalChapters && (
-          <div className="reader" dangerouslySetInnerHTML={{ __html: withBase(CLOSING_HTML) }} />
-        )}
+        {ch.n === BOOK.totalChapters && <ChapterArticle as="div" html={CLOSING_HTML} />}
 
         <nav dir="rtl" className="mt-14 grid gap-3 sm:grid-cols-2" aria-label="فصل قبل و بعد">
           {prev ? (

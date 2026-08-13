@@ -104,12 +104,12 @@ export default function Navbar() {
           <ul className="mx-auto hidden items-center gap-0.5 lg:flex">
             {LINKS.map((l) => (
               <li key={l.href}>
-                <a
-                  href={l.href}
+                <Link
+                  href={`/${l.href}`}
                   className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -201,8 +201,8 @@ export default function Navbar() {
                 <ul className="grid gap-1.5">
                   {LINKS.map((l) => (
                     <m.li key={l.href} variants={row}>
-                      <a
-                        href={l.href}
+                      <Link
+                        href={`/${l.href}`}
                         onClick={() => setOpen(false)}
                         className="group flex items-center gap-3.5 rounded-2xl border border-transparent px-3.5 py-3 transition-colors hover:border-border hover:bg-secondary/50"
                       >
@@ -216,7 +216,7 @@ export default function Navbar() {
                           </span>
                         </span>
                         <ArrowLeft className="size-4 shrink-0 text-faint transition-all group-hover:-translate-x-0.5 group-hover:text-primary-soft" />
-                      </a>
+                      </Link>
                     </m.li>
                   ))}
                 </ul>
@@ -241,7 +241,7 @@ export default function Navbar() {
                   </Button>
                 </div>
                 <p className="pt-1 text-center text-[11px] text-faint">
-                  ۳۶ فصل · ۱۴۵ صفحه · رایگان و متن‌باز
+                  ۳۶ فصل · ۱۴۵ صفحه · رایگان برای استفادهٔ غیرتجاری
                 </p>
               </m.footer>
             </m.aside>

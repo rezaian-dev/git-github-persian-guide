@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import TopLink from "@/components/layout/TopLink";
 import { BOOK_URL, REPO_URL, ISSUES_URL } from "@/lib/links";
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground">
           <div>© ۲۰۲۶ محمدرضا رضائیان · مرجع فارسی Git و GitHub ۲۰۲۶ · CC BY-NC-SA 4.0</div>
           <nav className="flex flex-wrap gap-5" aria-label="پیوندهای پایین صفحه">
-            <a href="#top" className="text-sub transition-colors hover:text-primary-soft">بازگشت به بالا ↑</a>
+            <TopLink />
             <a href={REPO_URL} target="_blank" rel="noopener" className="text-sub transition-colors hover:text-primary-soft">مخزن</a>
             <a href={ISSUES_URL} target="_blank" rel="noopener" className="text-sub transition-colors hover:text-primary-soft">گزارش خطا</a>
             <Link href={BOOK_URL} className="text-sub transition-colors hover:text-primary-soft">مطالعهٔ آنلاین کتاب</Link>

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { m, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 import { BookOpen, Download, Check, Sparkles } from "lucide-react";
@@ -35,7 +34,7 @@ export default function Hero() {
           <m.div variants={item}>
             <Badge variant="outline" className="gap-2 px-4 py-2 text-[13px] text-sub">
               <i className="size-2 animate-pulse-dot rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399]" />
-              ویرایش ۲۰۲۶ · Git 2.51+ · رایگان و متن‌باز
+              ویرایش ۲۰۲۶ · Git 2.51+ · رایگان و آزاد برای مطالعه
             </Badge>
           </m.div>
 
@@ -78,15 +77,14 @@ export default function Hero() {
 
           <m.div variants={item} className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5"><Check className="size-4 text-primary" /> ۳۶ فصل ساختاریافته</span>
-            <span className="flex items-center gap-1.5"><Sparkles className="size-4 text-primary" /> PDF · EPUB · HTML</span>
+            <span className="flex items-center gap-1.5"><Sparkles className="size-4 text-primary" /> PDF · EPUB · وب</span>
             <span className="flex items-center gap-1.5"><Check className="size-4 text-primary" /> مجوز CC BY-NC-SA 4.0</span>
           </m.div>
         </m.div>
 
         <m.div
           ref={stageRef}
-          className="relative mx-auto w-full max-w-[360px]"
-          style={{ perspective: 1400 }}
+          className="relative mx-auto w-full max-w-[360px] [perspective:1400px]"
           initial={{ opacity: 0, scale: 0.86, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
@@ -108,13 +106,17 @@ export default function Hero() {
 
           <m.div style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}>
             <m.div className="animate-float rounded-[22px] border border-input shadow-[0_50px_130px_-30px_rgb(6_10_24_/_0.7),0_0_90px_-30px_rgb(255_106_43_/_0.4)] motion-reduce:animate-none">
-              <Image
+              {/* Plain img + srcset: the Pages export has no image optimizer,
+                  so the pre-rendered variants are picked by the browser. */}
+              <img
                 src={asset("/cover-hero.webp")}
+                srcSet={`${asset("/cover-hero-480.webp")} 480w, ${asset("/cover-hero-720.webp")} 720w, ${asset("/cover-hero.webp")} 864w`}
+                sizes="(max-width: 640px) 78vw, 360px"
                 alt="جلد مرجع فارسی Git و GitHub ۲۰۲۶"
                 width={864}
-                height={1232}
-                priority
-                sizes="(max-width: 640px) 78vw, 360px"
+                height={1287}
+                fetchPriority="high"
+                decoding="async"
                 className="h-auto w-full rounded-[22px]"
               />
             </m.div>

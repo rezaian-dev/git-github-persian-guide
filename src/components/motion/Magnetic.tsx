@@ -3,6 +3,8 @@
 import { m, useSpring } from "motion/react";
 import { useRef } from "react";
 
+import { cn } from "@/lib/utils";
+
 /** Button that magnetically follows the cursor. */
 export default function Magnetic({
   children,
@@ -18,8 +20,8 @@ export default function Magnetic({
   return (
     <m.div
       ref={ref}
-      className={className}
-      style={{ x, y, display: "inline-block" }}
+      className={cn("inline-block", className)}
+      style={{ x, y }}
       onMouseMove={(e) => {
         const r = ref.current?.getBoundingClientRect();
         if (!r) return;

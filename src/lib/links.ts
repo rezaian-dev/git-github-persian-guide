@@ -5,9 +5,11 @@
  *   - Vercel / local  → served from "/"
  *   - GitHub Pages    → served from "/git-github-persian-guide"
  *
- * `next/link` and `next/image` prefix basePath automatically, but a plain
- * <a href="/pdf/..."> or a raw <img> does NOT. Use `asset()` for those so a
- * download link never 404s on Pages.
+ * `next/link` prefixes basePath automatically, so route helpers below return
+ * plain paths. Plain <a> / <img> and `next/image` with `unoptimized: true`
+ * (the Pages export has no image optimizer, so the file path passes through
+ * untouched) do NOT get a prefix — use `asset()` for those so downloads and
+ * images never 404 on Pages. Never combine `asset()` with `next/link`.
  */
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

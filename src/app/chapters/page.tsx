@@ -83,7 +83,7 @@ export default function BookPage() {
         </div>
 
         <p className="mt-8 text-center text-[13px] text-muted-foreground">
-          مجموع {TOTAL_CHAPTERS} فصل · ۱۴۵ صفحه · رایگان و متن‌باز
+          مجموع {TOTAL_CHAPTERS} فصل · ۱۴۵ صفحه · رایگان برای استفادهٔ غیرتجاری
         </p>
       </main>
 

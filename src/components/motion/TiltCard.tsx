@@ -37,7 +37,7 @@ export default function TiltCard({
     // h-full must be on BOTH the perspective wrapper and the motion div,
     // otherwise the grid's stretch never reaches the Card and siblings in a
     // row end up with different heights.
-    <div className="h-full" style={{ perspective: 900 }}>
+    <div className="h-full [perspective:900px]">
       <m.div
         ref={ref}
         className={cn("h-full", className)}

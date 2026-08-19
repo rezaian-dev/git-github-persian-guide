@@ -15,7 +15,7 @@ const EDITIONS = [
   { icon: BookOpen, title: "نسخهٔ وب", text: "ریدر آنلاین داخل همین اپلیکیشن؛ راست‌به‌چپ و بدون دانلود.", meta: "۳۶ فصل · رایگان", href: BOOK_URL, cta: "مطالعه آنلاین", download: false, external: false, internal: true },
   { icon: FileText, title: "PDF", text: "A4 رنگی، قابل جست‌وجو و آمادهٔ چاپ.", meta: "۱۴۵ صفحه · A4", href: PDF_URL, cta: "دانلود PDF", download: true, external: false, internal: false },
   { icon: Smartphone, title: "EPUB", text: "بازچینش‌پذیر برای کتاب‌خوان و موبایل.", meta: "راست‌به‌چپ · موبایل", href: EPUB_URL, cta: "دانلود EPUB", download: true, external: false, internal: false },
-  { icon: GitHubIcon, title: "مخزن پروژه", text: "کد سایت و انتشار نسخه‌ها.", meta: "Next.js · TypeScript", href: REPO_URL, cta: "مشاهده مخزن", download: false, external: true, internal: false },
+  { icon: GitHubIcon, title: "مخزن پروژه", text: "سورس سایت، متن فصل‌ها و انتشار نسخه‌ها.", meta: "GitHub · گزارش خطا", href: REPO_URL, cta: "مشاهده مخزن", download: false, external: true, internal: false },
 ];
 
 export default function Editions() {

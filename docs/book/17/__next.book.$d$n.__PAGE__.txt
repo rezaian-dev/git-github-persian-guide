@@ -1,0 +1,138 @@
+1:"$Sreact.fragment"
+2:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+3:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+4:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+5:T1a33,<p class="lead">Pull Request یعنی درخواست ادغام شاخهٔ تو در شاخهٔ هدف (معمولاً <code>main</code>). قبل از Merge، دیگران diff را می‌بینند، نظر می‌دهند و CI باید سبز باشد.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>PR را با <code>gh</code> و از VS Code باز کنی</li>
+<li>Draft، Checks و reviewers را درست به کار ببری</li>
+<li>استراتژی merge را آگاهانه انتخاب کنی</li>
+<li class="keep-next">PR بزرگ را بشکنی</li>
+</ul>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/github-pr.svg" alt="صفحهٔ Pull Request در GitHub"/>
+<p class="figcap">شکل ۱۴ — Conversation، Files، Checks سبز، Able to merge.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">📬 باز کردن PR</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">از ترمینال</span></div><pre>git<span style="color: #F8F8F2"> </span>push<span style="color: #F8F8F2"> </span>-u<span style="color: #F8F8F2"> </span>origin<span style="color: #F8F8F2"> </span>HEAD
+gh<span style="color: #F8F8F2"> </span>pr<span style="color: #F8F8F2"> </span>create<span style="color: #F8F8F2"> </span>--draft<span style="color: #F8F8F2"> </span>--fill<span style="color: #F8F8F2"> </span>--reviewer<span style="color: #F8F8F2"> </span>teammate
+gh<span style="color: #F8F8F2"> </span>pr<span style="color: #F8F8F2"> </span>view<span style="color: #F8F8F2"> </span>--web
+gh<span style="color: #F8F8F2"> </span>pr<span style="color: #F8F8F2"> </span>ready<span style="color: #F8F8F2">                 </span><span style="color: #959077"># از draft خارج شو</span>
+</pre></div>
+<div class="cols">
+<div class="col"><div class="col-title">🖥️ افزونه GitHub Pull Requests</div>
+<ol>
+<li>بعد از Push، نوار آبی <em>Create Pull Request</em></li>
+<li>یا Activity Bar → آیکون GitHub → <em>Create Pull Request</em></li>
+<li>Draft را تیک بزن، Reviewer انتخاب کن</li>
+<li><em>Checkout</em> روی PR دیگران برای تست محلی</li>
+<li>Files Changed → کامنت اینلاین → <strong>Submit Review</strong></li>
+<li>Merge از همان پنل (Squash/Merge/Rebase طبق تنظیم تیم)</li>
+</ol>
+</div>
+<div class="col"><div class="col-title">⌨️ Terminal + gh</div>
+<p><code>git push -u origin HEAD</code>
+<code>gh pr create --draft --fill</code>
+<code>gh pr checkout 42</code>
+<code>gh pr merge 42 --squash</code></p>
+</div>
+</div>
+<p class="keep-next">بدنهٔ خوب:</p>
+<ol>
+<li><strong>چرا</strong> این تغییر لازم است (لینک Issue)</li>
+<li><strong>چه</strong> عوض شد — در سطح محصول نه خط‌به‌خط</li>
+<li><strong>چگونه تست شد</strong></li>
+<li>اسکرین شات اگر UI است</li>
+<li>ریسک و rollback</li>
+</ol>
+<div class="callout callout-tip"><div class="callout-title">اندازه</div>
+<p>هدف: زیر ۴۰۰ خط منطقی. اگر بزرگ است، stacked PR یا چند PR متوالی. ریویوکننده خسته Approve دروغین می‌زند.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🧪 Checks</span></span></h2>
+<p class="keep-next">هر Push روی شاخهٔ PR، Actions را آتش می‌زند (فصل ۲۸). مربع سبز <em>Able to merge</em> یعنی:</p>
+<ul>
+<li>تعارض با base نیست</li>
+<li>بررسی‌های required پاس شده</li>
+<li>تعداد Approve کافی است</li>
+<li>conversationها resolve شده‌اند (اگر اجباری باشد)</li>
+</ul>
+<p>در VS Code تب Checks همان وضعیت را نشان می‌دهد.</p>
+<h2><span class="hx"><span class="hx-t">🔀 سه دکمهٔ Merge</span></span></h2>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>روش</th>
+<th>تاریخچهٔ main</th>
+<th>مناسب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Merge commit</strong></td>
+<td>گره دووالدی</td>
+<td>حفظ PR به‌عنوان واحد</td>
+</tr>
+<tr>
+<td><strong>Squash</strong></td>
+<td>یک کامیت</td>
+<td>شاخهٔ شلوغ / WIP زیاد</td>
+</tr>
+<tr>
+<td><strong>Rebase and merge</strong></td>
+<td>خطی بدون گره merge</td>
+<td>تیم متعهد به کامیت تمیز</td>
+</tr>
+</tbody>
+</table></div><p>تیم باید یکی را قفل کند تا <code>git log</code> یک‌شکل بماند.</p>
+<h2><span class="hx"><span class="hx-t">🧹 قبل از Review</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">تمیزکاری</span></div><pre>git<span style="color: #F8F8F2"> </span>fetch<span style="color: #F8F8F2"> </span>origin
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>origin/main<span style="color: #F8F8F2">          </span><span style="color: #959077"># روی شاخهٔ شخصی</span>
+git<span style="color: #F8F8F2"> </span>push<span style="color: #F8F8F2"> </span>--force-with-lease
+</pre></div>
+<p>تعارض را تو حل کن نه ریویوکننده.</p>
+<div class="callout callout-warn"><div class="callout-title">PR به main مستقیم از لپ‌تاپ بدون CI</div>
+<p>حتی در پروژهٔ شخصی Actions را روشن کن. حافظه عضله‌ای Production از همین‌جا ساخته می‌شود.</p>
+</div>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Junior — Draft یعنی چه؟</strong> PR قابل merge نیست تا Ready شود؛ سیگنال «نگاه نکن هنوز».</p>
+<p><strong>Mid — چرا force-with-lease بعد از rebase؟</strong> چون rebase هش عوض می‌کند؛ lease جلوی پاک کردن کار همکار روی همان شاخه را می‌گیرد.</p>
+<p><strong>Senior — stacked PR؟</strong> زنجیرهٔ PR که هر کدام روی قبلی است؛ نیازمند ابزار (Graphite یا <code>gh</code>) و توافق تیم.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li>PR را با <code>--draft</code> باز می‌کنی</li>
+<li>چرا را در بدنه می‌نویسی نه فقط چه</li>
+<li>Checks را قبل از درخواست ریویو سبز می‌کنی</li>
+<li>استراتژی merge تیم را می‌دانی</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> فرهنگ Code Review.</p></div>d:X
+12:X
+12:C
+0:{"buildId":"EZSyIB13lviHv3gpT-yRn","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L2",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L3",null,{"icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L4",null,{"current":17}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L2",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L2",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L2",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش دوم"," · ","کار روزانه، VS Code و GitHub"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"17"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۱۷ · Pull Request"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"Pull Request — دروازهٔ کیفیت تیم"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$5"}}],false,"$L6","$L7"]}]]}],["$L8","$L9","$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+1b:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+1c:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+1d:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+1e:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+6:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L2",null,{"href":"/book/16","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L3",null,{"icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۱۶"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Clone، Fork و Upstream — ورود به کد دیگران"}]]}]]}],["$","$L2",null,{"href":"/book/18","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۱۸"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Code Review — فرهنگ، نه گیر دادن"}]]}],["$","$L3",null,{"icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+7:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۱۷"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+8:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next"}]
+9:["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true}]
+a:["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true}]
+b:["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"فصل ۱۷ · Pull Request | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"Pull Request — دروازهٔ کیفیت تیم — فصل ۱۷ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1c","20",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+16:true
+19:null
+d:300
+d:C
+15:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+c:"$undefined"

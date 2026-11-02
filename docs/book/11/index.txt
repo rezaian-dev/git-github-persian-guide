@@ -1,0 +1,336 @@
+1:"$Sreact.fragment"
+2:I[78777,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+3:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+4:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+5:I[3265,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/30rpniwjfm9z7.js","/git-github-persian-guide/_next/static/chunks/18f95b8lj5e4c.js"],"default"]
+6:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+7:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+e:I[68027,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default",1]
+:HL["/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","style"]
+:HL["/git-github-persian-guide/_next/static/media/JetBrainsMono_Bold-s.p.191p904ugps23.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/JetBrainsMono_Regular-s.p.0h2t-824dnmbm.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Bold-s.p.2etnjmwb7b4kt.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_ExtraBold-s.p.16lki4rdowt64.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Medium-s.p.2h1gkwp6n-pc5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Regular-s.p.1q4vtznet77r-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+c:X
+0:{"P":null,"c":["","book","11",""],"q":"","i":false,"f":[[["",{"children":["book",{"children":[["n","11","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"fa","dir":"rtl","data-scroll-behavior":"smooth","className":"vazirmatn_d662d856-module__y3zgdW__variable jetbrains_33935a5b-module__Yg7saW__variable","children":["$","body",null,{"children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","$L5",null,{}],["$","main",null,{"className":"container flex min-h-svh flex-col items-center justify-center py-32 text-center","children":[["$","span",null,{"className":"grid size-16 place-items-center rounded-2xl border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"compass","size":24,"node":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["path",{"d":"m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z","key":"9ktpf1"}]]},"className":"size-8"}]}],["$","p",null,{"dir":"ltr","className":"mt-6 font-mono text-sm font-bold tracking-[0.3em] text-faint","children":"404"}],["$","h1",null,{"className":"mt-3 text-[clamp(28px,4.5vw,46px)] font-extrabold leading-tight","children":["این شاخه به جایی ",["$","span",null,{"className":"grad-text","children":"وصل نیست"}]]}],["$","p",null,{"className":"mt-4 max-w-md text-[15px] leading-8 text-muted-foreground","children":"صفحه‌ای که دنبالش می‌گردی وجود ندارد یا جابه‌جا شده است. از همین‌جا به خانه برگرد یا مطالعهٔ کتاب را ادامه بده."}],["$","div",null,{"className":"mt-8 flex flex-wrap justify-center gap-3","children":[["$","$L7",null,{"href":"/","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"house","size":24,"node":[["path",{"d":"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8","key":"5wwlr5"}],["path",{"d":"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z","key":"r6nss1"}]],"aliases":["home"]},"className":"$undefined"}]," بازگشت به خانه"],"data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-bold transition-[box-shadow,border-color,background-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-linear-to-br from-gold via-primary to-primary-deep text-primary-foreground shadow-[0_12px_40px_-10px_rgb(255_106_43_/_0.5)] hover:shadow-[0_18px_55px_-10px_rgb(255_106_43_/_0.7)] h-14 px-8 text-base","ref":null}],["$","$L7",null,{"href":"/book","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"$undefined"}]," مطالعهٔ کتاب"],"data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-bold transition-[box-shadow,border-color,background-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-secondary/50 text-foreground backdrop-blur-xl hover:border-primary/60 hover:bg-secondary h-14 px-8 text-base","ref":null}]]}]]}],"$L8"],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["$L9",{"children":["$La",{"children":["$Lb",{},null,false,null]},null,false,"$c"]},null,false,"$c"]},null,false,null],"$Ld",false]],"m":"$undefined","G":["$e",["$Lf"]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"EZSyIB13lviHv3gpT-yRn"}
+10:I[44308,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/30rpniwjfm9z7.js","/git-github-persian-guide/_next/static/chunks/18f95b8lj5e4c.js"],"default"]
+12:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+13:"$Sreact.suspense"
+15:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+8:["$","footer",null,{"className":"border-t border-border pb-10 pt-16","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"select-none text-center font-mono text-[clamp(40px,9vw,88px)] font-extrabold leading-none tracking-tight text-transparent [-webkit-text-stroke:1px_rgb(255_255_255_/_0.18)]","dir":"ltr","aria-hidden":"true","children":"Git & GitHub"}],["$","div",null,{"className":"mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground","children":[["$","div",null,{"children":"© ۲۰۲۶ محمدرضا رضائیان · مرجع فارسی Git و GitHub ۲۰۲۶ · CC BY-NC-SA 4.0"}],["$","nav",null,{"className":"flex flex-wrap gap-5","aria-label":"پیوندهای پایین صفحه","children":[["$","$L10",null,{}],["$","a",null,{"href":"https://github.com/rezaian-dev/git-github-persian-guide","target":"_blank","rel":"noopener","className":"text-sub transition-colors hover:text-primary-soft","children":"مخزن"}],["$","a",null,{"href":"https://github.com/rezaian-dev/git-github-persian-guide/issues","target":"_blank","rel":"noopener","className":"text-sub transition-colors hover:text-primary-soft","children":"گزارش خطا"}],["$","$L7",null,{"href":"/book","className":"text-sub transition-colors hover:text-primary-soft","children":"مطالعهٔ آنلاین کتاب"}]]}]]}]]}]}]
+9:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+b:["$","$1","c",{"children":["$L11",[["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true,"nonce":"$undefined"}]],["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}]
+d:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$13",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+f:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+c:C
+1a:T59a8,<p class="lead">Graph، شاخه، Sync، تعارض، rebase و PR همه از همان Ctrl+Shift+G می‌آیند. مثل فصل ۱۰: هر کار یعنی چند کلیک مشخص، چه باید ببینی، و اگر مال تو فرق داشت یعنی چه.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>Graph را با کلیک باز کنی و از راست‌کلیک روی کامیت نترسی</li>
+<li>Fetch / Pull / Push / Sync را از روی منو جدا بزنی و بدانی چرا دکمهٔ تو با کتاب یکی نیست</li>
+<li>تعارض و rebase را تا آخرین کلیک (Continue یا Abort) تمام کنی</li>
+<li>اگر Graph، Incoming یا افزونهٔ PR نبود، علت را بدانی</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">📈 Graph — باز کردن و راست‌کلیک</span></span></h2>
+<p><strong>کلیک‌ها برای باز شدن:</strong></p>
+<ol>
+<li><code>Ctrl+Shift+G</code>.</li>
+<li>ته ستون Source Control روی <strong>Graph</strong> یک کلیک (اگر <code>&gt;</code> دیدی، همان را باز کن).</li>
+<li class="keep-next">اگر Graph نبود: <code>Ctrl+Shift+P</code> → <code>Git: View History</code> → Enter.</li>
+</ol>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-graph-zoom.png" alt="Source Control Graph نزدیک"/>
+<p class="figcap">شکل ۱۱ — برش نزدیک. رنگ‌ها و هش‌ها مثال‌اند؛ تو کامیت‌های مخزن خودت را می‌بینی.</p>
+</div>
+<p><strong>باید ببینی:</strong> خط‌های رنگی، هش کوتاه، پیام کامیت، گاهی برچسب <code>main</code> / <code>HEAD</code>.</p>
+<p class="keep-next"><strong>اگر مال تو این‌طور نیست:</strong></p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>چه دیدی</th>
+<th>علت</th>
+<th>چه کار کن</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>اصلاً Graph در ستون نیست</td>
+<td>VS Code قدیمی‌تر از حدود ۱.۹۷</td>
+<td>VS Code را به‌روز کن؛ یا افزونهٔ Git Graph / GitLens</td>
+</tr>
+<tr>
+<td>Graph باز شد ولی یک نقطه است</td>
+<td>مخزن فقط یک کامیت دارد</td>
+<td>طبیعی است</td>
+</tr>
+<tr>
+<td>Incoming خالی است با اینکه همکار push کرده</td>
+<td>Fetch نشده</td>
+<td>منوی <code>···</code> → Fetch (پایین)</td>
+</tr>
+<tr>
+<td>راست‌کلیک منوی کوتاه دارد</td>
+<td>روی پیام کلیک کرده‌ای نه روی گره، یا افزونه منو را عوض کرده</td>
+<td>روی دایرهٔ کامیت راست‌کلیک کن</td>
+</tr>
+</tbody>
+</table></div><p class="keep-next"><strong>راست‌کلیک روی یک دایره / ردیف کامیت، بعد یک کلیک روی فرمان:</strong></p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>فرمان</th>
+<th>بعد از کلیک چه می‌شود</th>
+<th>اگر ترسیدی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkout</td>
+<td>HEAD می‌رود روی آن کامیت</td>
+<td>اگر شاخه نبود، نوار زرد detached می‌آید → فوری Create Branch</td>
+</tr>
+<tr>
+<td>Create Branch</td>
+<td>جعبهٔ نام می‌پرسد</td>
+<td>Enter بزن؛ معادل <code>git switch -c</code></td>
+</tr>
+<tr>
+<td>Cherry Pick</td>
+<td>یک کامیت جدید روی شاخهٔ فعلی</td>
+<td>تعارض آمد = فصل تعارض همین صفحه</td>
+</tr>
+<tr>
+<td>Revert</td>
+<td>یک کامیت خنثی‌کننده می‌سازد</td>
+<td>برای <code>main</code> مشترک همین را بزن نه Reset</td>
+</tr>
+<tr>
+<td>Reset Current Branch to Here</td>
+<td>می‌پرسد Soft/Hard</td>
+<td>Hard را روی شاخهٔ مشترک نزن</td>
+</tr>
+<tr>
+<td>Compare with HEAD</td>
+<td>diff باز می‌شود</td>
+<td>بی‌خطر</td>
+</tr>
+</tbody>
+</table></div><h2><span class="hx"><span class="hx-t">🌿 عوض کردن و ساختن شاخه — از نوار وضعیت</span></span></h2>
+<p class="keep-next"><strong>کلیک ۱:</strong> پایین-چپ پنجره، روی <strong>نام شاخه</strong> (مثلاً <code>main</code>).<br />
+<strong>باید ببینی:</strong> فهرست بالا وسط ادیتور (Quick Pick).</p>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/vscode-branch-picker.png" alt="انتخاب شاخه در نوار وضعیت VS Code"/>
+<p class="figcap">شکل ۱۱ب — اگر این فهرست نیامد، روی نام شاخه کلیک نشده یا Git پیدا نشده.</p>
+</div>
+<p><strong>کلیک ۲ — تعویض:</strong> روی نام شاخهٔ دیگر.<br />
+<strong>باید ببینی:</strong> نوار وضعیت همان نام را می‌گیرد؛ فایل‌های ادیتور عوض می‌شوند.</p>
+<p><strong>اگر خطا Your local changes would be overwritten:</strong> تغییرات ذخیره‌شده داری. اول Commit یا Stash (منوی <code>···</code> → Stash)، بعد دوباره نام شاخه را کلیک کن.</p>
+<p class="keep-next"><strong>کلیک ۲ — ساختن:</strong> روی <code>+ Create new branch from...</code> → یک کلیک روی پایه‌ای که می‌خواهی (<code>main</code>) → نام را تایپ کن مثلاً <code>feat/auth</code> → Enter.</p>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/vscode-create-branch.png" alt="ساخت شاخه از Command Palette"/>
+<p class="figcap">شکل ۱۱پ — همین کار از Palette با Git: Create Branch from... هم می‌شود.</p>
+</div>
+<p><strong>کلیک Publish Branch:</strong> در همان فهرست یا روی دکمهٔ ابری نوار وضعیت. اولین push است (<code>-u</code>).</p>
+<p><strong>اگر Publish می‌خواهد وارد GitHub شوی:</strong> Accounts پایین Activity Bar → Sign in. بدون origin، دکمهٔ اصلی پنل به‌جای Sync می‌ماند Publish.</p>
+<p><strong>اگر شاخهٔ جدید در فهرست نیست:</strong> هنوز Enter ساختن را نزدی، یا <code>refresh</code> لازم است: <code>···</code> → Refresh.</p>
+<h2><span class="hx"><span class="hx-t">📡 منوی ··· — هر فرمان یک کلیک، Sync آخرین انتخاب</span></span></h2>
+<p class="keep-next"><strong>کلیک:</strong> بالا-راست ستون Source Control روی <code>···</code> (شمارهٔ ۲ آناتومی فصل ۱۰).</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-menu-zoom.png" alt="منوی Fetch Pull Stash در Source Control"/>
+<p class="figcap">شکل ۱۱ت — ترتیب پیشنهادی: اول Fetch، نگاه به ↓↑، بعد Pull یا Push. Sync میان‌بر هر دوست.</p>
+</div>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>کلیک روی</th>
+<th>باید بعدش ببینی</th>
+<th>مال تو فرق دارد اگر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fetch</td>
+<td>عدد ↓ در نوار وضعیت زیاد شود، Graph Incoming پر شود؛ فایل‌ها عوض نمی‌شوند</td>
+<td>اینترنت/SSH نیست؛ یا origin نداری</td>
+</tr>
+<tr>
+<td>Pull</td>
+<td>فایل‌ها ممکن است عوض شوند؛ ↓ صفر شود</td>
+<td>تعارض → بخش بعد. اگر rebaseWhenSync روشن باشد ممکن است rebase شروع شود</td>
+</tr>
+<tr>
+<td>Pull (Rebase)</td>
+<td>اگر تعارض باشد نوار زرد Rebase</td>
+<td>روی <code>main</code> مشترک نزن</td>
+</tr>
+<tr>
+<td>Push</td>
+<td>↑ صفر شود</td>
+<td>rejected = کسی push کرده؛ Fetch کن نه Force</td>
+</tr>
+<tr>
+<td>Sync</td>
+<td>ترکیب pull/push</td>
+<td>اگر confirmSync روشن باشد یک Yes اضافه می‌پرسد — این «خراب بودن» نیست</td>
+</tr>
+<tr>
+<td>Stash (Include Untracked)</td>
+<td>Changes خالی می‌شود</td>
+<td>بدون Include، فایل‌های U می‌مانند و switch شکست می‌خورد</td>
+</tr>
+<tr>
+<td>Undo Last Commit</td>
+<td>فایل‌ها برمی‌گردند به Staged</td>
+<td>اگر push کرده باشی، بعداً Push rejected می‌شود</td>
+</tr>
+<tr>
+<td>Discard All Changes</td>
+<td>همهٔ فایل‌های M از لیست می‌روند</td>
+<td>پنجرهٔ Are you sure؟ — Yes یعنی از دست رفتن کار ذخیره‌نشده</td>
+</tr>
+</tbody>
+</table></div><p>نوار وضعیت <code>↑1 ↓2</code> یعنی ۱ کامیت برای push و ۲ برای pull. <strong>عدد تو با کتاب یکی نمی‌شود</strong> و نباید بشود.</p>
+<h2><span class="hx"><span class="hx-t">💥 تعارض — از حرف C تا Commit (merge)</span></span></h2>
+<p>تعارض فقط بعد از Merge / Pull / Cherry-pick / Rebase می‌آید. اگر هیچ‌کدام را نزدی و C دیدی، احتمالاً merge ناتمام قبلی مانده: Palette → <code>Git: Abort Merge</code>.</p>
+<p class="keep-next"><strong>باید ببینی:</strong> در Source Control عنوان <strong>Merge Changes</strong> و فایل با حرف <strong>C</strong>. دکمهٔ اصلی ممکن است بشود <strong>Accept Merge</strong> / <strong>Commit (merge)</strong>.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-conflict-zoom.png" alt="تعارض در Source Control و ادیتور"/>
+<p class="figcap">شکل ۱۱ث — نوار آبی چهار فرمان فقط روی فایل C بازشده از Source Control است.</p>
+</div>
+<p><strong>کلیک‌ها:</strong></p>
+<ol>
+<li><strong>یک کلیک</strong> روی فایل C.</li>
+<li>بالای بلوک قرمز/سبز، <strong>یک کلیک</strong> روی یکی از:
+<ul>
+<li><strong>Accept Current Change</strong> = نسخهٔ شاخه‌ای که روی آن بودی (<code>HEAD</code> / Ours)</li>
+<li><strong>Accept Incoming Change</strong> = نسخه‌ای که داشتی وارد می‌کردی (Theirs)</li>
+<li><strong>Accept Both Changes</strong> = هر دو پشت‌سرهم؛ بعد خودت ویرایش کن</li>
+<li><strong>Compare Changes</strong> = دو ستون</li>
+</ul>
+</li>
+<li><code>Ctrl+S</code>.</li>
+<li><strong>یک کلیک روی <code>+</code></strong> همان فایل (Stage). حرف C باید برود.</li>
+<li><strong>یک کلیک روی Commit (merge)</strong> یا Ctrl+Enter با پیام پیش‌فرض merge.</li>
+</ol>
+<p><strong>اگر نوار Accept نبود:</strong> Palette → <code>Merge Conflict: Open Merge Editor</code> — سه ستون Incoming / Current / Result. Result را درست کن → <strong>Accept Merge</strong>.</p>
+<p><strong>اگر هنوز C می‌ماند:</strong> Save و Stage را نزدی. یا چند تعارض در همان فایل است — همه را Accept کن.</p>
+<p><strong>پشیمانی قبل از مرحلهٔ ۵:</strong> Palette → <code>Git: Abort Merge</code>. بعد از Commit دیگر abort نیست؛ باید revert.</p>
+<h2><span class="hx"><span class="hx-t">🔁 Rebase ناتمام — نوار زرد را تا انتها دنبال کن</span></span></h2>
+<p>بعد از <strong>Pull (Rebase)</strong> یا <code>Git: Rebase Branch...</code> اگر تعارض باشد:</p>
+<p class="keep-next"><strong>باید ببینی:</strong> در پنل «Rebase in progress»، در بالا ادیتور نوار زرد، دکمه‌های Continue / Abort.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-rebase-zoom.png" alt="Rebase in progress در Source Control"/>
+<p class="figcap">شکل ۱۱ج — تا این نوار هست، دکمهٔ معمولی Commit را نزن. VS Code عمداً کامیت عادی را قفل یا گمراه‌کننده می‌کند.</p>
+</div>
+<p><strong>کلیک‌ها:</strong></p>
+<ol>
+<li>فایل C را مثل تعارض حل کن → Save → <code>+</code> (Stage).</li>
+<li><strong>یک کلیک Continue</strong> (= <code>git rebase --continue</code>).</li>
+<li>اگر تعارض بعدی آمد، ۱ و ۲ را تکرار کن تا نوار زرد برود.</li>
+</ol>
+<p><strong>اگر Continue خاکستری است:</strong> هنوز همهٔ فایل‌های C را Stage نکرده‌ای، یا Message rebase خالی است — جعبهٔ Message را خالی نگذار.</p>
+<p><strong>پشیمانی:</strong> یک کلیک <strong>Abort</strong>. همه چیز برمی‌گردد به قبل از rebase.</p>
+<p><strong>اگر وسط rebase VS Code را بستی و باز کردی:</strong> نوار زرد باید برگردد. اگر نماند، Palette → <code>Git: Continue Rebase</code> یا <code>Abort Rebase</code>.</p>
+<h2><span class="hx"><span class="hx-t">📚 چند مخزن در یک پنجره</span></span></h2>
+<p><strong>کلیک‌ها:</strong> <code>File → Add Folder to Workspace</code> → پوشهٔ دوم که خودش <code>.git</code> دارد.</p>
+<p class="keep-next"><strong>باید ببینی:</strong> در Source Control چند عنوان Repository. یک کلیک روی عنوان، آن مخزن را جمع/باز می‌کند.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-multirepo-zoom.png" alt="چند مخزن در Source Control"/>
+<p class="figcap">شکل ۱۱چ — اگر فقط یکی می‌بینی، پوشهٔ دوم Git ندارد یا هنوز Add Folder نکرده‌ای.</p>
+</div>
+<p><strong>اگر Commit روی مخزن غلط نشست:</strong> عنوان همان Repository را باز کن، بعد Message را بزن. VS Code روی مخزن «فعال» کامیت می‌کند.</p>
+<p>worktree: در ترمینال <code>git worktree add -b hotfix/500 ../hotfix main</code> بعد <code>File → Add Folder</code> روی <code>../hotfix</code>. یک شاخه در دو worktree هم‌زمان باز نمی‌شود — پیام خطا را با Stash یا عوض کردن شاخه حل کن.</p>
+<h2><span class="hx"><span class="hx-t">📬 Pull Request — افزونه، نه خود Git توکار</span></span></h2>
+<p>Source Control توکار PR نمی‌سازد. باید افزونهٔ <strong>GitHub Pull Requests</strong> نصب باشد.</p>
+<p><strong>کلیک نصب:</strong> Activity Bar آیکون Extensions (یا <code>Ctrl+Shift+X</code>) → جست‌وجو <code>GitHub Pull Requests</code> → Install → Accounts پایین Activity Bar → <strong>Sign in to GitHub</strong> → مرورگر Allow.</p>
+<p class="keep-next"><strong>اگر آیکون GitHub در Activity Bar نیامد:</strong> افزونه نصب نشده یا غیرفعال است. View → Appearance → Activity Bar را چک کن.</p>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/vscode-pr-ext.png" alt="بررسی Pull Request داخل VS Code"/>
+<p class="figcap">شکل ۱۲ — این نما مال افزونه است نه ستون Git. اگر ندیدی، Sign in نشده.</p>
+</div>
+<p><strong>ساخت PR از شاخهٔ فعلی:</strong></p>
+<ol>
+<li>اول Push / Publish Branch از Source Control (وگرنه GitHub شاخه را ندارد).</li>
+<li><code>Ctrl+Shift+P</code> → <code>GitHub Pull Requests: Create Pull Request</code>.</li>
+<li>عنوان و پایه (<code>main</code>) را تأیید کن → Create.</li>
+</ol>
+<p><strong>اگر Create خطا می‌دهد no upstream:</strong> Publish Branch را جا انداختی.</p>
+<p><strong>ریویو:</strong> آیکون GitHub → یک کلیک روی PR → Checkout → در Files Changed روی خط کلیک → کامنت → Approve.</p>
+<p><strong>اگر Checkout PR فایل‌های تو را overwrite می‌کند:</strong> اول Commit یا Stash از ستون Source Control.</p>
+<h2><span class="hx"><span class="hx-t">⚙️ اگر رفتار پنل «عجیب» است، اول این تنظیمات را چک کن</span></span></h2>
+<p class="keep-next"><code>Ctrl+,</code> → جست‌وجوی هر کلید:</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">.vscode/settings.json — رفتار SCM</span></div><pre><span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enabled&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.autofetch&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.confirmSync&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enableSmartCommit&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enableCommitSigning&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.untrackedChanges&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;separate&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.branchProtection&quot;</span><span style="color: #F8F8F2">: [</span><span style="color: #E6DB74">&quot;main&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #E6DB74">&quot;master&quot;</span><span style="color: #F8F8F2">],</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.branchProtectionPrompt&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;alwaysCommitToNewBranch&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.rebaseWhenSync&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.autoStash&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;scm.defaultViewMode&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;tree&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;scm.repositories.visible&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #AE81FF">8</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;diffEditor.ignoreTrimWhitespace&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;diffEditor.hideUnchangedRegions.enabled&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span>
+<span style="color: #F8F8F2">}</span>
+</pre></div>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>دیدی</th>
+<th>احتمالاً این تنظیم</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commit بدون <code>+</code> همه را برد</td>
+<td><code>enableSmartCommit</code> روشن — Off کن</td>
+</tr>
+<tr>
+<td>روی <code>main</code> کامیت زدی، VS Code شاخهٔ جدید ساخت</td>
+<td><code>branchProtection</code> — عمدی است</td>
+</tr>
+<tr>
+<td>Sync ناگهان rebase شروع کرد</td>
+<td><code>rebaseWhenSync</code> روشن</td>
+</tr>
+<tr>
+<td>قبل از Pull فایل‌ها ناپدید شدند و بعد برگشتند</td>
+<td><code>autoStash</code> — stash موقت، ترس ندارد</td>
+</tr>
+<tr>
+<td>Untracked ته لیست قاطی است</td>
+<td><code>untrackedChanges</code> را <code>separate</code> کن</td>
+</tr>
+<tr>
+<td>هر Sync یک دیالوگ Yes/No</td>
+<td><code>confirmSync</code> — سلیقه است</td>
+</tr>
+</tbody>
+</table></div><h2><span class="hx"><span class="hx-t">⌨️ Palette — وقتی کلیک را پیدا نمی‌کنی</span></span></h2>
+<p><code>Ctrl+Shift+P</code>، تایپ <code>Git:</code>، Enter روی فرمان. اگر فرمان در فهرست نیست: یا پوشه مخزن ندارد، یا Git پیدا نشده (<code>Git: Show Git Output</code>).</p>
+<p><code>Stage All Changes</code> · <code>Commit</code> · <code>Undo Last Commit</code> · <code>Push</code> · <code>Pull</code> · <code>Pull (Rebase)</code> · <code>Fetch</code> · <code>Sync</code> · <code>Create Branch from...</code> · <code>Checkout to...</code> · <code>Merge Branch...</code> · <code>Rebase Branch...</code> · <code>Publish Branch</code> · <code>Stash</code> · <code>Continue Rebase</code> · <code>Abort Rebase</code> · <code>Abort Merge</code> · <code>View History</code> · <code>Show Git Output</code></p>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Mid — چرا Sync من merge ساخت و مال همکار rebase؟</strong> تنظیم <code>git.rebaseWhenSync</code> فرق دارد. از روی دکمه حدس نزن؛ منوی <code>···</code> را بخوان.</p>
+<p><strong>Senior — Checkout PR چه کلیک‌هایی زیرش است؟</strong> Sign in، fetch همان ref، switch به آن شاخه. اگر Changes خالی نبود، VS Code اول Stash/Commit می‌خواهد.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li>Graph را باز کرده‌ای و اگر نبود علت را بلدی</li>
+<li>از روی <code>···</code> یک Fetch جدا زده‌ای نه فقط Sync</li>
+<li>یک فایل C را تا Commit (merge) یا Abort برده‌ای</li>
+<li>نوار زرد rebase را Continue یا Abort کرده‌ای نه Commit عادی</li>
+<li>اگر PR نبود، فرق افزونه با Source Control توکار را می‌دانی</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> diff، blame، log و bisect — دیدن تغییر با چشم مسلح.</p></div>1d:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+11:["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L7",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:props:notFound:0:2:props:children:4:props:children:1:props:children:0:props:icon","className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L19",null,{"current":11}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L7",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L7",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L7",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش دوم"," · ","کار روزانه، VS Code و GitHub"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"11"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۱۱ · Source Control پیشرفته"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"Source Control فوق‌پیشرفته — Graph تا PR"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$1a"}}],false,"$L1b","$L1c"]}]]}]
+1b:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L7",null,{"href":"/book/10","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۱۰"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Source Control از صفر — Ctrl+Shift+G"}]]}]]}],["$","$L7",null,{"href":"/book/12","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۱۲"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"دیدن تغییر — diff، log، blame و bisect"}]]}],["$","$L6",null,{"ref":"$undefined","icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+1c:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۱۱"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]
+14:null
+18:[["$","title","0",{"children":"فصل ۱۱ · Source Control پیشرفته | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"Source Control فوق‌پیشرفته — Graph تا PR — فصل ۱۱ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1d","20",{}]]

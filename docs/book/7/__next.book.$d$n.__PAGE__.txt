@@ -1,0 +1,131 @@
+1:"$Sreact.fragment"
+2:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+3:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+4:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+5:T202a,<p class="lead">Merge یعنی دو خط تاریخچه را یکی کنی. اگر هر دو خط همان خطوط فایل را جور دیگری عوض کرده باشند، Git نمی‌داند کدام درست است — به آن تعارض می‌گویند و باید خودت انتخاب کنی.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>fast-forward را از merge commit تشخیص دهی</li>
+<li>تعارض را در VS Code با دکمه‌های Accept حل کنی</li>
+<li><code>--no-ff</code> و <code>--squash</code> را بدانی کی استفاده کنی</li>
+<li>abort کنی وقتی اوضاع خراب شد</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">🧬 سه شکل ادغام</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">سناریوی آموزشی</span></div><pre>git<span style="color: #F8F8F2"> </span>switch<span style="color: #F8F8F2"> </span>main
+git<span style="color: #F8F8F2"> </span>merge<span style="color: #F8F8F2"> </span>feat/auth
+</pre></div>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>نوع</th>
+<th>کی رخ می‌دهد</th>
+<th>نتیجه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fast-forward</strong></td>
+<td>از وقتی شاخه را ساختی، <code>main</code> هیچ کامیت جدیدی نگرفته</td>
+<td>Git فقط برچسب <code>main</code> را روی همان کامیت‌های شاخه جلو می‌کشد؛ کامیت ادغام ساخته نمی‌شود</td>
+</tr>
+<tr>
+<td><strong>Merge commit</strong></td>
+<td>هر دو طرف بعد از جدایی کامیت جدید دارند</td>
+<td>یک کامیت جدید با <em>دو والد</em> ساخته می‌شود</td>
+</tr>
+<tr>
+<td><strong>Squash merge</strong></td>
+<td>معمولاً دکمهٔ GitHub</td>
+<td>همهٔ کامیت‌های شاخه در <em>یک</em> کامیت روی هدف خلاصه می‌شوند؛ جزئیات میانی در <code>main</code> نمی‌ماند</td>
+</tr>
+</tbody>
+</table></div><div class="diagram">
+<img src="/git-github-persian-guide/book/figures/merge-rebase.svg" alt="مقایسه merge و rebase"/>
+<p class="figcap">شکل ۵ — merge تاریخچه را حفظ می‌کند؛ rebase آن را خطی می‌کند (جزئیات در فصل ۲۳).</p>
+</div>
+<div class="callout callout-tip"><div class="callout-title">GitHub و --no-ff</div>
+<p>بسیاری از تیم‌ها <em>Create a merge commit</em> را می‌خواهند تا هر PR یک گره قابل‌ردیابی داشته باشد. معادل محلی: <code>git merge --no-ff feat/auth</code>.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">💥 تعارض — آناتومی</span></span></h2>
+<p class="keep-next">تعارض وقتی است که Git نمی‌تواند دو تغییر روی یک hunk را ترکیب کند.</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">نشانه‌های تعارض در فایل</span></div><pre>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+return token;
+=======
+return rotate(token);
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feat/auth
+</pre></div>
+<p class="keep-next">سه نسخه در ذهن داشته باش:</p>
+<ul>
+<li><strong>Ours / Current</strong> = شاخه‌ای که روی آن هستی (<code>HEAD</code>)</li>
+<li><strong>Theirs / Incoming</strong> = شاخه‌ای که merge می‌کنی</li>
+<li class="keep-next"><strong>Base</strong> = جد مشترک (برای merge سه‌طرفه)</li>
+</ul>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/vscode-merge-conflict.png" alt="حل تعارض در VS Code"/>
+<p class="figcap">شکل ۶ — CodeLens: Accept Current، Accept Incoming، Accept Both، Compare Changes.</p>
+</div>
+<h3><span class="hx"><span class="hx-t">مسیر حل در VS Code</span></span></h3>
+<ol>
+<li>Source Control بخش <strong>Merge Changes</strong> را نشان می‌دهد</li>
+<li>فایل را باز کن — نوار CodeLens بالای تعارض</li>
+<li>انتخاب کن یا دستی ویرایش کن</li>
+<li>فایل را <strong>Stage</strong> کن (علامت تعارض تمام می‌شود)</li>
+<li class="keep-next">Commit ادغام را کامل می‌کند</li>
+</ol>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">ترمینال هم‌ارز</span></div><pre>git<span style="color: #F8F8F2"> </span>merge<span style="color: #F8F8F2"> </span>--abort<span style="color: #F8F8F2">              </span><span style="color: #959077"># پشیمانی قبل از commit</span>
+git<span style="color: #F8F8F2"> </span>merge<span style="color: #F8F8F2"> </span>--continue<span style="color: #F8F8F2">           </span><span style="color: #959077"># بعد از حل</span>
+git<span style="color: #F8F8F2"> </span>diff<span style="color: #F8F8F2"> </span>--name-only<span style="color: #F8F8F2"> </span>--diff-filter<span style="color: #FF4689">=</span>U
+</pre></div>
+<div class="callout callout-warn"><div class="callout-title">Accept Both کورکورانه</div>
+<p>هر دو را پذیرفتن گاهی کد syntactically درست و semantically غلط می‌سازد. همیشه تست را اجرا کن.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🧰 استراتژی‌های پیشرفتهٔ merge</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">ابزارها</span></div><pre>git<span style="color: #F8F8F2"> </span>merge<span style="color: #F8F8F2"> </span>-X<span style="color: #F8F8F2"> </span>ours<span style="color: #F8F8F2"> </span>feat/x<span style="color: #F8F8F2">       </span><span style="color: #959077"># در تعارض، ما برنده</span>
+git<span style="color: #F8F8F2"> </span>merge<span style="color: #F8F8F2"> </span>-X<span style="color: #F8F8F2"> </span>theirs<span style="color: #F8F8F2"> </span>feat/x
+git<span style="color: #F8F8F2"> </span>log<span style="color: #F8F8F2"> </span>--merge<span style="color: #F8F8F2">                </span><span style="color: #959077"># فقط کامیت‌های درگیر تعارض</span>
+git<span style="color: #F8F8F2"> </span>checkout<span style="color: #F8F8F2"> </span>--conflict<span style="color: #FF4689">=</span>diff3<span style="color: #F8F8F2"> </span>--<span style="color: #F8F8F2"> </span>file
+</pre></div>
+<p><code>diff3</code> جد مشترک را هم نشان می‌دهد — برای تعارض سخت طلایی است. در VS Code: <code>&quot;merge-conflict.diff3&quot;: true</code> (یا Merge Editor).</p>
+<p>VS Code <strong>Merge Editor</strong> سه‌ستونه (Incoming / Current / Result) را از Command Palette با <code>Merge Conflict: Open Merge Editor</code> باز می‌کند.</p>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Junior — fast-forward یعنی چه؟</strong> حرکت اشاره‌گر بدون کامیت جدید، چون تاریخچه خطی بوده.</p>
+<p><strong>Mid — چرا squash در main تاریخچه را «دروغ» می‌کند؟</strong> چون چند کامیت واقعی به یک کامیت تبدیل می‌شوند؛ bisect و blame جزئیات را از دست می‌دهند — ولی PR تمیز می‌ماند.</p>
+<p><strong>Senior — recursive در برابر ort؟</strong> از Git ۲.۳۴ موتور پیش‌فرض <strong>ort</strong> است؛ سریع‌تر و پیش‌بینی‌پذیرتر از recursive قدیمی.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li>سه نوع ادغام را بلدی</li>
+<li>تعارض را در VS Code حل کرده‌ای</li>
+<li><code>merge --abort</code> را حفظی بلدی</li>
+<li>می‌دانی squash چه چیزی را پنهان می‌کند</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> Undo — نجات بدون وحشت.</p></div>d:X
+12:X
+12:C
+0:{"buildId":"EZSyIB13lviHv3gpT-yRn","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L2",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L3",null,{"icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L4",null,{"current":7}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L2",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L2",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L2",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش یکم"," · ","بنیادها و مدل ذهنی Git"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"07"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۷ · ادغام و تعارض"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"ادغام — fast-forward، merge commit و تعارض"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$5"}}],false,"$L6","$L7"]}]]}],["$L8","$L9","$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+1b:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+1c:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+1d:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+1e:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+6:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L2",null,{"href":"/book/6","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L3",null,{"icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۶"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"شاخه‌ها — اشاره‌گر، نه کپی"}]]}]]}],["$","$L2",null,{"href":"/book/8","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۸"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Undo — restore، reset، revert و reflog"}]]}],["$","$L3",null,{"icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+7:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۷"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+8:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next"}]
+9:["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true}]
+a:["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true}]
+b:["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"فصل ۷ · ادغام و تعارض | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"ادغام — fast-forward، merge commit و تعارض — فصل ۷ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1c","20",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+16:true
+19:null
+d:300
+d:C
+15:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+c:"$undefined"

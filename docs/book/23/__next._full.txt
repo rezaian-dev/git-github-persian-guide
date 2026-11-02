@@ -1,0 +1,150 @@
+1:"$Sreact.fragment"
+2:I[78777,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+3:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+4:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+5:I[3265,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/30rpniwjfm9z7.js","/git-github-persian-guide/_next/static/chunks/18f95b8lj5e4c.js"],"default"]
+6:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+7:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+e:I[68027,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default",1]
+:HL["/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","style"]
+:HL["/git-github-persian-guide/_next/static/media/JetBrainsMono_Bold-s.p.191p904ugps23.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/JetBrainsMono_Regular-s.p.0h2t-824dnmbm.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Bold-s.p.2etnjmwb7b4kt.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_ExtraBold-s.p.16lki4rdowt64.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Medium-s.p.2h1gkwp6n-pc5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/media/Vazirmatn_Regular-s.p.1q4vtznet77r-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+c:X
+0:{"P":null,"c":["","book","23",""],"q":"","i":false,"f":[[["",{"children":["book",{"children":[["n","23","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"fa","dir":"rtl","data-scroll-behavior":"smooth","className":"vazirmatn_d662d856-module__y3zgdW__variable jetbrains_33935a5b-module__Yg7saW__variable","children":["$","body",null,{"children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","$L5",null,{}],["$","main",null,{"className":"container flex min-h-svh flex-col items-center justify-center py-32 text-center","children":[["$","span",null,{"className":"grid size-16 place-items-center rounded-2xl border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"compass","size":24,"node":[["circle",{"cx":"12","cy":"12","r":"10","key":"1mglay"}],["path",{"d":"m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z","key":"9ktpf1"}]]},"className":"size-8"}]}],["$","p",null,{"dir":"ltr","className":"mt-6 font-mono text-sm font-bold tracking-[0.3em] text-faint","children":"404"}],["$","h1",null,{"className":"mt-3 text-[clamp(28px,4.5vw,46px)] font-extrabold leading-tight","children":["این شاخه به جایی ",["$","span",null,{"className":"grad-text","children":"وصل نیست"}]]}],["$","p",null,{"className":"mt-4 max-w-md text-[15px] leading-8 text-muted-foreground","children":"صفحه‌ای که دنبالش می‌گردی وجود ندارد یا جابه‌جا شده است. از همین‌جا به خانه برگرد یا مطالعهٔ کتاب را ادامه بده."}],["$","div",null,{"className":"mt-8 flex flex-wrap justify-center gap-3","children":[["$","$L7",null,{"href":"/","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"house","size":24,"node":[["path",{"d":"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8","key":"5wwlr5"}],["path",{"d":"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z","key":"r6nss1"}]],"aliases":["home"]},"className":"$undefined"}]," بازگشت به خانه"],"data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-bold transition-[box-shadow,border-color,background-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-linear-to-br from-gold via-primary to-primary-deep text-primary-foreground shadow-[0_12px_40px_-10px_rgb(255_106_43_/_0.5)] hover:shadow-[0_18px_55px_-10px_rgb(255_106_43_/_0.7)] h-14 px-8 text-base","ref":null}],["$","$L7",null,{"href":"/book","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"$undefined"}]," مطالعهٔ کتاب"],"data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-bold transition-[box-shadow,border-color,background-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-secondary/50 text-foreground backdrop-blur-xl hover:border-primary/60 hover:bg-secondary h-14 px-8 text-base","ref":null}]]}]]}],"$L8"],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["$L9",{"children":["$La",{"children":["$Lb",{},null,false,null]},null,false,"$c"]},null,false,"$c"]},null,false,null],"$Ld",false]],"m":"$undefined","G":["$e",["$Lf"]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"EZSyIB13lviHv3gpT-yRn"}
+10:I[44308,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/30rpniwjfm9z7.js","/git-github-persian-guide/_next/static/chunks/18f95b8lj5e4c.js"],"default"]
+12:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+13:"$Sreact.suspense"
+15:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+8:["$","footer",null,{"className":"border-t border-border pb-10 pt-16","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"select-none text-center font-mono text-[clamp(40px,9vw,88px)] font-extrabold leading-none tracking-tight text-transparent [-webkit-text-stroke:1px_rgb(255_255_255_/_0.18)]","dir":"ltr","aria-hidden":"true","children":"Git & GitHub"}],["$","div",null,{"className":"mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground","children":[["$","div",null,{"children":"© ۲۰۲۶ محمدرضا رضائیان · مرجع فارسی Git و GitHub ۲۰۲۶ · CC BY-NC-SA 4.0"}],["$","nav",null,{"className":"flex flex-wrap gap-5","aria-label":"پیوندهای پایین صفحه","children":[["$","$L10",null,{}],["$","a",null,{"href":"https://github.com/rezaian-dev/git-github-persian-guide","target":"_blank","rel":"noopener","className":"text-sub transition-colors hover:text-primary-soft","children":"مخزن"}],["$","a",null,{"href":"https://github.com/rezaian-dev/git-github-persian-guide/issues","target":"_blank","rel":"noopener","className":"text-sub transition-colors hover:text-primary-soft","children":"گزارش خطا"}],["$","$L7",null,{"href":"/book","className":"text-sub transition-colors hover:text-primary-soft","children":"مطالعهٔ آنلاین کتاب"}]]}]]}]]}]}]
+9:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+b:["$","$1","c",{"children":["$L11",[["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true,"nonce":"$undefined"}]],["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}]
+d:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$13",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+f:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/2nngsvmr-189j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+c:C
+1a:T2052,<p class="lead">Rebase کامیت‌های شاخهٔ تو را برمی‌دارد و یکی‌یکی روی نوک یک شاخهٔ دیگر دوباره اعمال می‌کند. نتیجه تاریخچهٔ خطی است، ولی هش هر کامیت عوض می‌شود. فقط روی شاخه‌ای که دیگران از آن استفاده نمی‌کنند این کار را بکن.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>rebase را به‌عنوان «کامیت‌ها را روی پایهٔ جدید دوباره پخش کن» توضیح دهی</li>
+<li><code>rebase -i</code> را برای squash و reword به کار ببری</li>
+<li><code>--autosquash</code> و <code>fixup!</code> را بلد باشی</li>
+<li class="keep-next">قانون طلایی را هرگز نشکنی</li>
+</ul>
+<div class="diagram">
+<img src="/git-github-persian-guide/book/figures/merge-rebase.svg" alt="merge در برابر rebase"/>
+<p class="figcap">شکل ۱۶ — rebase کامیت‌های جدید می‌سازد (D′ و E′)؛ هش عوض می‌شود.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🧠 rebase دقیقاً چه می‌کند؟</span></span></h2>
+<p class="keep-next">Git هر کامیت شاخهٔ تو را که در <code>main</code> نیست برمی‌دارد، <code>main</code> را HEAD می‌کند، و وصله‌ها را یکی‌یکی اعمال می‌کند. نتیجه: تاریخچهٔ خطی. هزینه: هویت جدید برای هر کامیت.</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">به‌روز کردن شاخهٔ شخصی</span></div><pre>git<span style="color: #F8F8F2"> </span>fetch<span style="color: #F8F8F2"> </span>origin
+git<span style="color: #F8F8F2"> </span>switch<span style="color: #F8F8F2"> </span>feat/auth
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>origin/main
+git<span style="color: #F8F8F2"> </span>push<span style="color: #F8F8F2"> </span>--force-with-lease
+</pre></div>
+<div class="cols">
+<div class="col"><div class="col-title">🖥️ VS Code Git</div>
+<ul>
+<li><code>...</code> → <strong>Pull (Rebase)</strong> برای به‌روز کردن شاخه</li>
+<li>Palette: <code>Git: Rebase Branch...</code> → <code>origin/main</code></li>
+<li>تعارض: Merge Editor → Stage → <code>Git: Rebase Continue</code></li>
+<li>نوار زرد بالای ادیتور یعنی rebase ناتمام است — کامیت عادی نزن</li>
+<li><code>Git: Rebase Abort</code> برای پشیمانی</li>
+</ul>
+</div>
+<div class="col"><div class="col-title">⌨️ Terminal</div>
+<p><code>git fetch origin</code>
+<code>git rebase origin/main</code>
+<code>git rebase --continue</code>
+<code>git rebase --abort</code>
+<code>git push --force-with-lease</code></p>
+</div>
+</div>
+<h2><span class="hx"><span class="hx-t">🎛️ interactive — اتاق عمل</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">پنج کامیت آخر را ویرایش کن</span></div><pre>git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>-i<span style="color: #F8F8F2"> </span>HEAD~5
+</pre></div>
+<p class="keep-next">ویرایشگر (در این کتاب VS Code با <code>core.editor=&quot;code --wait&quot;</code>) لیستی می‌آورد:</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">todo</span></div><pre>pick a11 feat: add login form
+pick b22 fix: typo in label
+pick c33 wip
+pick d44 feat: wire submit
+pick e55 docs: readme
+</pre></div>
+<p class="keep-next">فرمان‌ها:</p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>فرمان</th>
+<th>معنی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pick</code></td>
+<td>نگه دار</td>
+</tr>
+<tr>
+<td><code>reword</code></td>
+<td>پیام را عوض کن</td>
+</tr>
+<tr>
+<td><code>edit</code></td>
+<td>بایست؛ فایل را درست کن</td>
+</tr>
+<tr>
+<td><code>squash</code></td>
+<td>با قبلی یکی کن؛ پیام‌ها را ترکیب کن</td>
+</tr>
+<tr>
+<td><code>fixup</code></td>
+<td>با قبلی یکی کن؛ پیام را دور بریز</td>
+</tr>
+<tr>
+<td><code>drop</code></td>
+<td>حذف</td>
+</tr>
+</tbody>
+</table></div><p>ترتیب خطوط = ترتیب تاریخچه. جابه‌جا کن تا داستان منطقی شود.</p>
+<div class="callout callout-danger"><div class="callout-title">هرگز rebase روی کامیت عمومی</div>
+<p>اگر <code>origin/main</code> یا شاخه‌ای که همکارت checkout کرده شامل آن هش‌هاست، rebase = دو تاریخچهٔ موازی و force-push جنگی.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">⚡ fixup و autosquash</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">بعد از ریویو، بدون کامیت «address comments»</span></div><pre>git<span style="color: #F8F8F2"> </span>commit<span style="color: #F8F8F2"> </span>--fixup<span style="color: #F8F8F2"> </span>a11
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>-i<span style="color: #F8F8F2"> </span>--autosquash<span style="color: #F8F8F2"> </span>origin/main
+</pre></div>
+<p><code>--fixup</code> پیامی مثل <code>fixup! feat: add login form</code> می‌سازد؛ autosquash آن را زیر هدف می‌چسباند. در Git جدید <code>git commit --squash</code> هم هست.</p>
+<p>از Git ۲.۳۸+ پرچم <code>--update-refs</code> شاخه‌های محلی دیگری که به کامیت‌های بازنویسی‌شده اشاره می‌کردند را هم حرکت می‌دهد — نجات از شاخه‌های یتیم.</p>
+<h2><span class="hx"><span class="hx-t">🧩 تعارض وسط rebase</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">نجات</span></div><pre><span style="color: #959077"># فایل را در VS Code حل و Stage کن</span>
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>--continue
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>--abort<span style="color: #F8F8F2">          </span><span style="color: #959077"># پشیمانی کامل</span>
+git<span style="color: #F8F8F2"> </span>rebase<span style="color: #F8F8F2"> </span>--skip<span style="color: #F8F8F2">           </span><span style="color: #959077"># این وصله را دور بینداز — خطرناک</span>
+</pre></div>
+<p><code>rerere</code> (فصل ۲۴) تعارض تکراری را به خاطر می‌سپارد.</p>
+<div class="callout callout-tip"><div class="callout-title">VS Code</div>
+<p>وضعیت rebase را نوار زرد بالای ادیتور نشان می‌دهد. Merge Editor همان UI تعارض فصل ۷ است. تا نوار زرد هست، کامیت عادی نزن.</p>
+</div>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Mid — چرا PR بعد از rebase «جدید» به نظر می‌رسد؟</strong> چون هش عوض شده؛ GitHub فایل‌ها را مقایسه می‌کند نه هش را. Force-with-lease لازم است.</p>
+<p><strong>Senior — rebase در برابر merge برای به‌روز کردن شاخه؟</strong> rebase تاریخچهٔ PR را خطی و خوانا می‌کند؛ merge یک گره همگام‌سازی اضافه می‌کند. تیم باید یکی را انتخاب کند.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li>rebase فقط روی شاخهٔ خودت</li>
+<li><code>fixup</code> + autosquash را بلدی</li>
+<li><code>--abort</code> عضله‌ای شده</li>
+<li>force خام نمی‌زنی</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> cherry-pick، revert پیشرفته و rerere.</p></div>11:["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L7",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:props:notFound:0:2:props:children:4:props:children:1:props:children:0:props:icon","className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L19",null,{"current":23}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L7",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L6",null,{"ref":"$undefined","icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L7",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L7",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش سوم"," · ","پیشرفته، امنیت، CI و Production"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"23"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۲۳ · Rebase تعاملی"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"Rebase تعاملی — بازنویسی تاریخچه مثل مجسمه‌ساز"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$1a"}}],false,"$L1b","$L1c"]}]]}]
+1b:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L7",null,{"href":"/book/22","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L6",null,{"ref":"$undefined","icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۲۲"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Conventional Commits — پیام به‌عنوان API"}]]}]]}],["$","$L7",null,{"href":"/book/24","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۲۴"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Cherry-pick، revert پیشرفته و rerere"}]]}],["$","$L6",null,{"ref":"$undefined","icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+1c:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۲۳"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]
+1d:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+14:null
+18:[["$","title","0",{"children":"فصل ۲۳ · Rebase تعاملی | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"Rebase تعاملی — بازنویسی تاریخچه مثل مجسمه‌ساز — فصل ۲۳ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1d","20",{}]]

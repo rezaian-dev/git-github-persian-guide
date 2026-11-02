@@ -1,0 +1,204 @@
+1:"$Sreact.fragment"
+2:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+3:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+4:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+5:T446a,<p class="lead">هر کامیت نام و ایمیل را داخل خودش ذخیره می‌کند. اگر این دو را غلط بگذاری، تاریخچه مال کس دیگری به نظر می‌رسد. این فصل را یک‌بار درست تنظیم کن.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>Git را روی Windows / macOS / Linux نصب و نسخه را چک کنی</li>
+<li><code>user.name</code> و <code>user.email</code> را درست — و ترجیحاً محلی — تنظیم کنی</li>
+<li>SSH Key بسازی، به GitHub اضافه کنی و با <code>gh auth</code> وارد شوی</li>
+<li>کامیت‌ها را با SSH sign کنی (جایگزین مدرن GPG)</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">🛠️ نصب Git ۲.۵۱+</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">نصب — لینوکس / macOS / Windows</span></div><pre><span style="color: #959077"># Debian / Ubuntu</span>
+sudo<span style="color: #F8F8F2"> </span>apt<span style="color: #F8F8F2"> </span>update<span style="color: #F8F8F2"> </span><span style="color: #FF4689">&amp;&amp;</span><span style="color: #F8F8F2"> </span>sudo<span style="color: #F8F8F2"> </span>apt<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>-y<span style="color: #F8F8F2"> </span>git<span style="color: #F8F8F2"> </span>gh
+
+<span style="color: #959077"># macOS</span>
+brew<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>git<span style="color: #F8F8F2"> </span>gh
+
+<span style="color: #959077"># Windows (پاورشل به‌عنوان Admin)</span>
+winget<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>Git.Git<span style="color: #F8F8F2"> </span>GitHub.cli
+
+git<span style="color: #F8F8F2"> </span>--version<span style="color: #F8F8F2">    </span><span style="color: #959077"># باید ۲.۵۱ یا جدیدتر باشد</span>
+gh<span style="color: #F8F8F2"> </span>--version
+</pre></div>
+<p>در VS Code: از Command Palette (<code>Ctrl+Shift+P</code>) بنویس <code>Git: Show Git Output</code>. اگر Git پیدا نشود، مسیر را در <code>git.path</code> تنظیم کن.</p>
+<h2><span class="hx"><span class="hx-t">🪪 هویت — دو لایه</span></span></h2>
+<p class="keep-next">دو هویت جدا وجود دارد و باید یکی باشند:</p>
+<ol>
+<li><strong>هویت Git</strong> — همان <code>user.name</code> و <code>user.email</code> که داخل هر کامیت نوشته می‌شود.</li>
+<li><strong>حساب GitHub</strong> — ایمیلی که در Settings گیت‌هاب ثبت کرده‌ای.</li>
+</ol>
+<p class="keep-next">اگر ایمیل کامیت با ایمیل حساب یکی نباشد، کنار کامیت در GitHub آواتار خاکستری می‌بینی و نشان <strong>Verified</strong> (تأیید امضا) نمی‌آید.</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">پیکربندی هویت</span></div><pre><span style="color: #959077"># سراسری — فقط اگر یک هویت داری</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>user.name<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;rezaian-dev&quot;</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>user.email<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;mrezaian.dev@gmail.com&quot;</span>
+
+<span style="color: #959077"># بهتر: هویت داخل هر مخزن (توصیهٔ تیمی)</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>user.name<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;rezaian-dev&quot;</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>user.email<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;mrezaian.dev@gmail.com&quot;</span>
+
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>init.defaultBranch<span style="color: #F8F8F2"> </span>main
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>pull.rebase<span style="color: #F8F8F2"> false</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>fetch.prune<span style="color: #F8F8F2"> true</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>rerere.enabled<span style="color: #F8F8F2"> true</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>core.editor<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;code --wait&quot;</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>alias.st<span style="color: #F8F8F2"> </span>status
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>alias.lg<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;log --oneline --graph --decorate --all&quot;</span>
+</pre></div>
+<div class="callout callout-warn"><div class="callout-title">ایمیل مخفی GitHub</div>
+<p>اگر نمی‌خواهی ایمیلت در تاریخچهٔ عمومی دیده شود، از noreply گیت‌هاب استفاده کن:</p>
+<p><code>12345678+rezaian-dev@users.noreply.github.com</code></p>
+<p>در Settings → Emails گزینهٔ <em>Block command line pushes that expose my email</em> را روشن کن.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🔑 SSH — درِ جلویی GitHub</span></span></h2>
+<p class="keep-next">HTTPS با token کار می‌کند اما SSH برای کار روزانه تمیزتر است.</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">ساخت کلید Ed25519</span></div><pre>ssh-keygen<span style="color: #F8F8F2"> </span>-t<span style="color: #F8F8F2"> </span>ed25519<span style="color: #F8F8F2"> </span>-C<span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;mrezaian.dev@gmail.com&quot;</span>
+<span style="color: #959077"># Enter — passphrase قوی بگذار</span>
+
+<span style="color: #F8F8F2">eval </span><span style="color: #E6DB74">&quot;</span><span style="color: #66D9EF">$(</span>ssh-agent<span style="color: #F8F8F2"> </span>-s<span style="color: #66D9EF">)</span><span style="color: #E6DB74">&quot;</span>
+ssh-add<span style="color: #F8F8F2"> </span>~/.ssh/id_ed25519
+
+<span style="color: #959077"># کلید عمومی را کپی کن</span>
+cat<span style="color: #F8F8F2"> </span>~/.ssh/id_ed25519.pub
+</pre></div>
+<p class="keep-next">در GitHub: <strong>Settings → SSH and GPG keys → New SSH key</strong>. بعد:</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">تست اتصال</span></div><pre>ssh<span style="color: #F8F8F2"> </span>-T<span style="color: #F8F8F2"> </span>git@github.com
+<span style="color: #959077"># Hi rezaian-dev! You&#39;ve successfully authenticated...</span>
+</pre></div>
+<p>در VS Code وقتی Clone می‌کنی، اگر remote با <code>git@github.com:</code> شروع شود از همین کلید استفاده می‌شود.</p>
+<h2><span class="hx"><span class="hx-t">✍️ امضای کامیت با SSH — استاندارد ۲۰۲۶</span></span></h2>
+<p class="keep-next">GPG هنوز معتبر است اما <strong>SSH signing</strong> ساده‌تر است و همان کلید را دوباره مصرف می‌کند.</p>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">فعال‌سازی امضا</span></div><pre>git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>gpg.format<span style="color: #F8F8F2"> </span>ssh
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>user.signingkey<span style="color: #F8F8F2"> </span>~/.ssh/id_ed25519.pub
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>commit.gpgsign<span style="color: #F8F8F2"> true</span>
+git<span style="color: #F8F8F2"> </span>config<span style="color: #F8F8F2"> </span>--global<span style="color: #F8F8F2"> </span>tag.gpgsign<span style="color: #F8F8F2"> true</span>
+</pre></div>
+<p>همان کلید عمومی را در GitHub به‌عنوان <em>Signing Key</em> هم اضافه کن. بعد از آن، کامیت‌هایت نشان <strong>Verified</strong> می‌گیرند.</p>
+<div class="callout callout-tip"><div class="callout-title">VS Code</div>
+<p>در Settings بگذار:</p>
+<p><code>git.enableCommitSigning: true</code></p>
+<p>دکمهٔ Commit از همین تنظیم پیروی می‌کند — لازم نیست هر بار پرچم <code>-S</code> بزنی.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🐙 ورود با GitHub CLI</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">gh auth</span></div><pre>gh<span style="color: #F8F8F2"> </span>auth<span style="color: #F8F8F2"> </span>login
+<span style="color: #959077"># GitHub.com → SSH → Login with browser</span>
+
+gh<span style="color: #F8F8F2"> </span>auth<span style="color: #F8F8F2"> </span>status
+gh<span style="color: #F8F8F2"> </span>api<span style="color: #F8F8F2"> </span>user<span style="color: #F8F8F2"> </span>--jq<span style="color: #F8F8F2"> </span>.login<span style="color: #F8F8F2">    </span><span style="color: #959077"># rezaian-dev</span>
+</pre></div>
+<p>از این به بعد <code>gh repo create</code>، <code>gh pr create</code> و <code>gh run list</code> بدون token دستی کار می‌کنند.</p>
+<h2><span class="hx"><span class="hx-t">🧩 تنظیمات VS Code که Senior می‌چیند</span></span></h2>
+<div class="code"><div class="code-head"><span class="dots"><i></i><i></i><i></i></span><span class="fname">.vscode/settings.json — گیت</span></div><pre><span style="color: #F8F8F2">{</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enabled&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.autofetch&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.confirmSync&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enableSmartCommit&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.enableCommitSigning&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.untrackedChanges&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;separate&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.branchProtection&quot;</span><span style="color: #F8F8F2">: [</span><span style="color: #E6DB74">&quot;main&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #E6DB74">&quot;master&quot;</span><span style="color: #F8F8F2">],</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.branchProtectionPrompt&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;alwaysCommitToNewBranch&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;git.rebaseWhenSync&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;scm.defaultViewMode&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #E6DB74">&quot;tree&quot;</span><span style="color: #F8F8F2">,</span>
+<span style="color: #F8F8F2">  </span><span style="color: #FF4689">&quot;diffEditor.ignoreTrimWhitespace&quot;</span><span style="color: #F8F8F2">: </span><span style="color: #66D9EF">false</span>
+<span style="color: #F8F8F2">}</span>
+</pre></div>
+<h2><span class="hx"><span class="hx-t">🧩 افزونهٔ گیت VS Code — اتاق فرمان روزانه</span></span></h2>
+<p class="keep-next">Git داخل VS Code سه لایه دارد. این کتاب هر فرمان را با <strong>هر دو مسیر</strong> یاد می‌دهد: ترمینال و این افزونه‌ها.</p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>لایه</th>
+<th>شناسهٔ افزونه</th>
+<th>نقش</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Git توکار</strong></td>
+<td>همراه VS Code</td>
+<td>Source Control، Stage، Commit، Branch، Sync</td>
+</tr>
+<tr>
+<td><strong>GitHub Pull Requests</strong></td>
+<td><code>GitHub.vscode-pull-request-github</code></td>
+<td>Clone از GitHub، Checkout PR، ریویو اینلاین، Merge</td>
+</tr>
+<tr>
+<td><strong>Git Graph</strong> یا <strong>GitLens</strong></td>
+<td><code>mhutchie.git-graph</code> / <code>eamodio.gitlens</code></td>
+<td>DAG رنگی، blame خطی، مقایسهٔ کامیت‌ها</td>
+</tr>
+<tr>
+<td><strong>GitHub Actions</strong></td>
+<td><code>github.vscode-github-actions</code></td>
+<td>وضعیت workflow کنار ادیتور</td>
+</tr>
+</tbody>
+</table></div><p class="keep-next">نصب از خود ادیتور:</p>
+<ol>
+<li><code>Ctrl+Shift+X</code> → Extensions</li>
+<li>جست‌وجو: <code>GitHub Pull Requests</code> → Install</li>
+<li>جست‌وجو: <code>Git Graph</code> → Install</li>
+<li>Accounts (پایین Activity Bar) → <strong>Sign in to GitHub</strong></li>
+<li class="keep-next"><code>Ctrl+Shift+G</code> باید پنل Source Control را باز کند — خانهٔ روزانهٔ Git در این کتاب؛ فصل ۱۰ و ۱۱ آن را تا تسلط کامل می‌روند.</li>
+</ol>
+<div class="cols">
+<div class="col"><div class="col-title">🖥️ VS Code Git</div>
+<p><strong>Commit:</strong> جعبهٔ پیام → <code>Ctrl+Enter</code>
+<strong>شاخه:</strong> کلیک روی <code>main</code> در نوار وضعیت
+<strong>Sync:</strong> آیکون ↻ کنار نام شاخه
+<strong>PR:</strong> آیکون GitHub در Activity Bar</p>
+</div>
+<div class="col"><div class="col-title">⌨️ Terminal</div>
+<p><code>git commit -m &quot;...&quot;</code>
+<code>git switch -c feat/x</code>
+<code>git push -u origin HEAD</code>
+<code>gh pr create --fill</code></p>
+</div>
+</div>
+<p>قانون این کتاب: مفهوم را در ترمینال بفهم؛ کار روزانه را در VS Code انجام بده. Senior هر دو را بلداست.</p>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Junior — چرا SSH بهتر از HTTPS است؟</strong> کلید روی دیسک می‌ماند، passphrase در agent کش می‌شود، و token PAT را هر چند ماه عوض نمی‌کنی.</p>
+<p><strong>Mid — تفاوت user.email و حساب GitHub؟</strong> Git فیلد را داخل شیء commit می‌نویسد. GitHub با همان ایمیل کامیت را به پروفایل وصل می‌کند.</p>
+<p><strong>Senior — چرا امضا مهم است؟</strong> بدون امضا هر کسی می‌تواند با <code>user.name</code> تو کامیت جعلی بسازد. Verified یعنی کلید ثبت‌شده در GitHub آن شیء را امضا کرده.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li><code>git --version</code> حداقل ۲.۵۱ است</li>
+<li><code>user.name</code> / <code>user.email</code> با GitHub یکی است</li>
+<li><code>ssh -T git@github.com</code> سلام می‌دهد</li>
+<li>کامیت تست با نشان Verified ساخته‌ای</li>
+<li>VS Code Signing و branch protection روشن است</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> سه درخت Git — جایی که ۸۰٪ سردرگمی متولد می‌شود.</p></div>d:X
+12:X
+12:C
+0:{"buildId":"EZSyIB13lviHv3gpT-yRn","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L2",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L3",null,{"icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L4",null,{"current":2}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L2",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L2",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L2",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش یکم"," · ","بنیادها و مدل ذهنی Git"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"02"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۲ · نصب و هویت"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"نصب و هویت — ستاپ حرفه‌ای Git در ۲۰۲۶"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$5"}}],false,"$L6","$L7"]}]]}],["$L8","$L9","$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+1b:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+1c:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+1d:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+1e:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+6:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L2",null,{"href":"/book/1","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L3",null,{"icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۱"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"معرفی Git و نقشه راه ۲۰۲۶ — از صفر تا Senior"}]]}]]}],["$","$L2",null,{"href":"/book/3","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۳"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"سه درخت — Working Tree، Index و Repository"}]]}],["$","$L3",null,{"icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+7:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۲"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+8:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next"}]
+9:["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true}]
+a:["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true}]
+b:["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"فصل ۲ · نصب و هویت | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"نصب و هویت — ستاپ حرفه‌ای Git در ۲۰۲۶ — فصل ۲ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1c","20",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+16:true
+19:null
+d:300
+d:C
+15:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+c:"$undefined"

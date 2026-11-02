@@ -1,0 +1,380 @@
+1:"$Sreact.fragment"
+2:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+3:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+4:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+5:T6788,<p class="lead">خانهٔ روزانهٔ Git در VS Code پنل Source Control است. میانبر ثابت این کتاب Ctrl+Shift+G است. اینجا هر کلیک را به ترتیب می‌نویسیم و برای هر تفاوت («چرا مال من این‌طور است؟») دلیل دقیق می‌آید.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری</span></span></h2>
+<ul>
+<li>پنل را با کلیک مشخص باز کنی و بدانی بعد از آن باید چه ببینی</li>
+<li>اگر دکمه یا لیست تو با عکس کتاب یکی نبود، در همان لحظه علت را بدانی</li>
+<li>یک فایل را از Save تا Commit، کلیک‌به‌کلیک، تمام کنی</li>
+<li>Stage، Unstage، Discard و Stage Selected Ranges را بدون حدس بزنی</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">🧭 قبل از اولین کلیک — عکس کتاب مال <em>یک</em> حالت است</span></span></h2>
+<p class="keep-next">عکس‌های این فصل از یک VS Code واقعی‌اند: ویندوز، زبان انگلیسی، تم تیره، مخزنی که Working Tree تمیز است و origin پانزده کامیت جلوتر. <strong>صفحهٔ تو باید دکمه‌های همان‌جا را داشته باشد، نه لزوماً همان عدد ۱۵ یا همان نام فایل.</strong></p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>چیزی که در عکس می‌بینی</th>
+<th>مال تو ممکن است</th>
+<th>چرا؟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>برچسب انگلیسی <code>Source Control</code>، <code>Commit</code>، <code>Sync Changes</code></td>
+<td>فارسی: «کنترل منبع»، «ثبت»، «همگام‌سازی تغییرات»</td>
+<td>زبان نمایش VS Code. موقعیت دکمه یکی است؛ فقط نوشته عوض می‌شود.</td>
+</tr>
+<tr>
+<td>تم تیرهٔ سرمه‌ای</td>
+<td>تم روشن یا تم دیگر</td>
+<td>رنگ عوض می‌شود؛ نام فرمان‌ها عوض نمی‌شود.</td>
+</tr>
+<tr>
+<td><code>Sync Changes 15↓</code></td>
+<td><code>Commit</code> یا <code>Publish Branch</code> یا هیچ دکمهٔ آبی</td>
+<td>بستگی دارد تغییرات محلی داری یا نه، و آیا <code>origin</code> هست یا نه — پایین، سه حالت.</td>
+</tr>
+<tr>
+<td>حرف <code>M</code> کنار <code>src/auth.ts</code></td>
+<td>فایل و حرف دیگر، یا لیست خالی</td>
+<td>مثال کتاب است. تو فایل خودت را می‌بینی.</td>
+</tr>
+<tr>
+<td>Graph پایین پنل</td>
+<td>Graph نیست</td>
+<td>نسخهٔ قدیمی VS Code، یا بخش جمع شده؛ فلش <code>&gt;</code> را باز کن.</td>
+</tr>
+<tr>
+<td>میانبر <code>Ctrl+Shift+G</code></td>
+<td>در مک گاهی باید <code>Cmd</code> نباشد؛ همین Ctrl است</td>
+<td>در VS Code روی مک هم پیش‌فرض Ctrl+Shift+G است نه Cmd.</td>
+</tr>
+</tbody>
+</table></div><div class="callout callout-note"><div class="callout-title">زبان عکس‌ها انگلیسی است عمداً</div>
+<p>در شکل‌ها متن فارسی نمی‌گذاریم (برعکس می‌شود). اگر VS Code تو فارسی است، همان دکمه را از روی <em>جایگاه</em> پیدا کن نه از روی املای کتاب.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">⌨️ باز کردن پنل — سه کلیک معادل، یکی کافی است</span></span></h2>
+<p class="keep-next">یکی از این سه را بزن؛ هر سه باید <strong>همان ستون چپ</strong> را باز کنند:</p>
+<ol>
+<li>صفحه کلید: <code>Ctrl+Shift+G</code> (ویندوز، لینوکس، مک)</li>
+<li>ماوس: در نوار باریک چپ (Activity Bar) روی آیکون شاخه/Git کلیک کن — در عکس کتاب شمارهٔ ۱</li>
+<li>اگر هیچ‌کدام کار نکرد: <code>Ctrl+Shift+P</code> → تایپ کن <code>View: Show Source Control</code> → Enter</li>
+</ol>
+<p><strong>بعد از باز شدن باید ببینی:</strong> ستون سمت چپ با عنوان Source Control. ادیتور سمت راست سر جایش می‌ماند.</p>
+<p class="keep-next"><strong>اگر مال تو این‌طور نیست:</strong></p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>چه دیدی</th>
+<th>علت</th>
+<th>چه کار کن</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>هیچ پنلی باز نشد</td>
+<td>فوکوس روی ترمینال است و میانبر قورت داده شد</td>
+<td>یک‌بار روی ادیتور کلیک کن، دوباره <code>Ctrl+Shift+G</code></td>
+</tr>
+<tr>
+<td>پنل Explorer باز شد نه Git</td>
+<td>آیکون اشتباه (دو سند بالا)</td>
+<td>آیکون سوم/چهارم Activity Bar؛ یا همان Palette</td>
+</tr>
+<tr>
+<td>ستون آمد ولی نوشته Git not found / Git not installed</td>
+<td>VS Code فایل <code>git.exe</code> را پیدا نکرده</td>
+<td>Palette → <code>Git: Show Git Output</code>. Settings → <code>git.path</code> را به مسیر نصب Git بده. از نو VS Code را باز کن</td>
+</tr>
+<tr>
+<td>ستون آمد، کاملاً خالی، بدون Message</td>
+<td>پوشه باز نیست</td>
+<td><code>File → Open Folder</code> روی پوشهٔ پروژه</td>
+</tr>
+</tbody>
+</table></div><h2><span class="hx"><span class="hx-t">🧭 آناتومی — بعد از باز شدن، این چهار نقطه را لمس کن</span></span></h2>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-anatomy.png" alt="آناتومی نزدیک پنل Source Control"/>
+<p class="figcap">شکل ۹ — برش نزدیک. شماره‌ها را با فهرست زیر تطبیق بده. دکمهٔ آبی اینجا Sync است نه Commit؛ برای تو ممکن است برعکس باشد.</p>
+</div>
+<ol class="legend">
+<li><strong>کلیک روی آیکون Git</strong> در Activity Bar. اگر روی آیکون <em>عدد</em> بود یعنی فایل تغییرکرده داری. اگر عدد نبود، یا Working Tree تمیز است یا نشان روی آیکون دیگری است (در عکس کامل کتاب، نشان آبی روی Extensions است نه Git — این باگ نیست).</li>
+<li><strong>عنوان Source Control</strong> و سه‌نقطهٔ <code>···</code> بالا-راست. یک کلیک روی <code>···</code> منوی Fetch / Pull / Push / Stash را باز می‌کند (فصل ۱۱).</li>
+<li><strong>یک کلیک داخل جعبهٔ Message</strong> — مکان‌نما باید چشمک بزند. این‌جا متن کامیت را می‌نویسی. <code>Ctrl+Enter</code> فقط وقتی کار می‌کند که فوکوس همین جعبه باشد.</li>
+<li><strong>دکمهٔ بزرگ زیر جعبه</strong> — برچسبش <em>ثابت نیست</em>. VS Code بر اساس وضعیت مخزن یکی از این‌ها را می‌نویسد: <strong>Initialize Repository</strong>، <strong>Publish Branch</strong>، <strong>Commit</strong>، <strong>Sync Changes</strong>، یا <strong>Commit (merge)</strong>.</li>
+</ol>
+<p class="keep-next">پایین همان ستون، بدون عوض کردن پنل:</p>
+<ul>
+<li><strong>Graph</strong> — یک کلیک روی <code>&gt;</code> یا روی کلمهٔ Graph. اگر نبود، VS Code را به‌روز کن یا Palette → <code>Git: View History</code>.</li>
+<li class="keep-next"><strong>نوار وضعیت پایین-چپ پنجره</strong> (نه داخل ستون): نام شاخه. <strong>یک کلیک</strong> روی نام شاخه = فهرست عوض کردن شاخه.</li>
+</ul>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-status-zoom.png" alt="نوار وضعیت Git در VS Code"/>
+<p class="figcap">شکل ۹ب — یک کلیک روی main. عدد ↓ و ↑ مال این مخزن است؛ مال تو ۰ و ۰ هم طبیعی است.</p>
+</div>
+<p><strong>اگر نوار وضعیت شاخه نشان نمی‌دهد:</strong> یا پوشه Git ندارد، یا Git پیدا نشده. اول همان جدول «اگر مال تو این‌طور نیست» را بالا ببین.</p>
+<h2><span class="hx"><span class="hx-t">😶 دکمهٔ بزرگ زیر Message — از روی برچسب بفهم کجایی</span></span></h2>
+<p>VS Code یک دکمهٔ اصلی دارد. برچسب را بخوان؛ حدس نزن.</p>
+<h3><span class="hx"><span class="hx-t">حالت ۱ — نوشته Initialize Repository / Publish to GitHub</span></span></h3>
+<p class="keep-next">یعنی پوشه‌ای که <strong>Open Folder</strong> کرده‌ای فایل <code>.git</code> ندارد.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-init-zoom.png" alt="Initialize Repository در Source Control"/>
+<p class="figcap">شکل ۹پ — فقط وقتی `.git` نیست این دو دکمه را می‌بینی.</p>
+</div>
+<p><strong>کلیک‌ها:</strong></p>
+<ol>
+<li><code>File → Open Folder</code> — پوشهٔ خود پروژه را انتخاب کن، نه درایو و نه پوشهٔ والد.</li>
+<li><code>Ctrl+Shift+G</code>.</li>
+<li><strong>یک کلیک</strong> روی <strong>Initialize Repository</strong>. معادل <code>git init</code>. بعد از کلیک باید جعبهٔ Message ظاهر شود و اگر فایلی باشد، لیست Changes پر شود.</li>
+<li>همان لحظه فایل <code>.gitignore</code> بساز (<code>Ctrl+N</code>، ذخیره با همین نام) تا <code>node_modules</code> در Changes نیاید.</li>
+<li><strong>Publish to GitHub</strong> را فقط اگر می‌خواهی ریپو روی GitHub ساخته شود بزن. اگر بزنی و وارد حساب نباشی، پنجرهٔ ورود مرورگر باز می‌شود — این خطا نیست.</li>
+</ol>
+<p><strong>اگر بعد از Initialize هنوز همان دو دکمه را می‌بینی:</strong> پوشهٔ اشتباه باز است. در Explorer باید <code>.git</code> را (گاهی مخفی) ببینی. <code>File → Open Folder</code> را تکرار کن.</p>
+<p><strong>اگر Publish خاکستری است یا خطا می‌دهد:</strong> Accounts پایین Activity Bar → Sign in to GitHub. بدون ورود، Publish کار نمی‌کند؛ Initialize کار می‌کند.</p>
+<h3><span class="hx"><span class="hx-t">حالت ۲ — نوشته Sync Changes (شاید با عدد ↓ یا ↑)</span></span></h3>
+<p>یعنی مخزن هست، <strong>فایل ذخیره‌شدهٔ تغییرکرده برای کامیت نداری</strong>، ولی با <code>origin</code> هم‌تراز نیستی.</p>
+<ul>
+<li><code>۱۵↓</code> = روی سرور ۱۵ کامیت هست که تو نداری → Sync تقریباً <code>pull</code> است.</li>
+<li><code>↑۳</code> = تو ۳ کامیت داری که سرور ندارد → Sync تقریباً <code>push</code> است.</li>
+<li>هر دو = واگرایی؛ Sync ممکن است merge بسازد.</li>
+</ul>
+<p>لیست Changes خالی در این حالت <strong>موفقیت</strong> است (<code>nothing to commit, working tree clean</code>)، نه اینکه Git خراب باشد.</p>
+<p><strong>اگر Sync را زدی و از تو تأیید خواست:</strong> تنظیم <code>git.confirmSync</code> روشن است — Yes بگو یا در Settings خاموشش کن.</p>
+<p><strong>اگر Sync خطا داد (rejected / diverged):</strong> فصل ۱۱ — اول Fetch، بعد Pull یا Pull (Rebase). Force نزن.</p>
+<h3><span class="hx"><span class="hx-t">حالت ۳ — نوشته Commit (یا Commit با فلش ▾)</span></span></h3>
+<p>یعنی حداقل یک فایل در Changes یا Staged هست.</p>
+<p><strong>اگر تو Commit می‌بینی و کتاب Sync:</strong> تو فایل ذخیره‌نشده یا تغییرکرده داری؛ کتاب در آن عکس Working Tree تمیز نشان می‌دهد. هر دو درست‌اند.</p>
+<h2><span class="hx"><span class="hx-t">✍️ مسیر کامل کامیت — کلیک به کلیک</span></span></h2>
+<p class="keep-next">هدف: یک فایل را عوض کنی و در تاریخچه ثبت شود.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-commit-zoom.png" alt="کامیت و diff در Source Control"/>
+<p class="figcap">شکل ۱۰ — بعد از مرحلهٔ ۴ باید چیزی شبیه این ببینی: پیام، فایل‌ها با M/U، diff سبز/قرمز.</p>
+</div>
+<ol>
+<li>
+<p><strong>فایل را در ادیتور عوض کن</strong> و <code>Ctrl+S</code> بزن.<br />
+<strong>باید ببینی:</strong> روی آیکون Git عدد می‌آید؛ فایل در Changes ظاهر می‌شود.<br />
+<strong>اگر نیامد:</strong> Save نشده، یا فایل داخل <code>.gitignore</code> است، یا پوشهٔ دیگری Open است.</p>
+</li>
+<li>
+<p><strong><code>Ctrl+Shift+G</code>.</strong><br />
+<strong>باید ببینی:</strong> نام فایل + حرف <code>M</code> یا <code>U</code>.</p>
+</li>
+<li>
+<p><strong>یک کلیک روی نام فایل در Changes.</strong><br />
+<strong>باید ببینی:</strong> سمت راست، diff. خط قرمز = حذف، سبز = اضافه.<br />
+<strong>اگر سمت راست همان Welcome VS Code ماند:</strong> روی نام فایل کلیک نشده؛ روی فضای خالی ستون کلیک کرده‌ای.</p>
+</li>
+<li>
+<p><strong>یک کلیک روی <code>+</code> سمت راست همان فایل</strong> (وقتی نشانگر روی ردیف است ظاهر می‌شود). معادل <code>git add</code>.<br />
+<strong>باید ببینی:</strong> فایل از <strong>Changes</strong> به <strong>Staged Changes</strong> می‌پرد.<br />
+<strong>اگر <code>+</code> نبود:</strong> نشانگر را روی ردیف فایل ببر. در بعضی تم‌ها <code>+</code> فقط hover است. یا Palette → <code>Git: Stage Changes</code>.</p>
+</li>
+<li>
+<p><strong>یک کلیک داخل جعبهٔ Message</strong> و بنویس مثلاً <code>feat(auth): add JWT refresh flow</code>.<br />
+<strong>اگر جعبه غیرفعال است:</strong> هنوز Staged نداری و Smart Commit خاموش است — مرحلهٔ ۴ را بزن. یا فوکوس روی ادیتور است.</p>
+</li>
+<li>
+<p><strong><code>Ctrl+Enter</code></strong> (مک: <code>Cmd+Enter</code>) <strong>یا</strong> یک کلیک روی دکمهٔ <strong>Commit</strong>.<br />
+<strong>باید ببینی:</strong> لیست خالی می‌شود، دکمه ممکن است به Sync/Publish عوض شود، نوار وضعیت <code>↑1</code> بگیرد اگر remote داری.</p>
+</li>
+</ol>
+<p><strong>اگر کلیک Commit همهٔ فایل‌ها را برد نه فقط یکی:</strong> <code>git.enableSmartCommit</code> روشن است. Settings → این گزینه را Off کن. از این به بعد بدون Stage، دکمه Commit کار نمی‌کند یا هشدار می‌دهد.</p>
+<p><strong>اگر خطا Signing failed / secret key:</strong> فصل ۲ — امضا روشن است ولی کلید SSH signing روی این ماشین نیست. موقتاً <code>git.enableCommitSigning</code> را Off کن یا کلید را بساز.</p>
+<p><strong>اگر خطا Please tell me who you are:</strong> <code>user.name</code> و <code>user.email</code> ست نشده — فصل ۲.</p>
+<h2><span class="hx"><span class="hx-t">📦 Staged در برابر Changes — دو کلیک معکوس</span></span></h2>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-staged-zoom.png" alt="Staged Changes و Changes جدا"/>
+<p class="figcap">شکل ۱۰ب — بالا می‌رود داخل کامیت؛ پایین هنوز نمی‌رود. اگر فقط یک لیست می‌بینی، یا چیزی Stage نکرده‌ای یا Untracked جداست.</p>
+</div>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>می‌خواهی</th>
+<th>کلیک دقیق</th>
+<th>باید ببینی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>فایل برود برای کامیت</td>
+<td><code>+</code> روی ردیف در Changes</td>
+<td>ردیف می‌پرد به عنوان <strong>Staged Changes</strong></td>
+</tr>
+<tr>
+<td>پشیمان از Stage</td>
+<td><code>-</code> روی ردیف در Staged</td>
+<td>برمی‌گردد به Changes؛ فایل روی دیسک همان است</td>
+</tr>
+<tr>
+<td>همه را Stage</td>
+<td><code>+</code> روی نوار عنوان <strong>Changes</strong> (نه روی فایل)</td>
+<td>همه می‌روند بالا</td>
+</tr>
+<tr>
+<td>تغییرات فایل روی دیسک دور ریخته شود</td>
+<td>راست‌کلیک روی ردیف Changes → <strong>Discard Changes</strong> → تأیید</td>
+<td>فایل از لیست می‌رود؛ محتوای ادیتور به نسخهٔ قبلی برمی‌گردد</td>
+</tr>
+</tbody>
+</table></div><p><strong>اگر Staged Changes را به‌عنوان عنوان جدا نمی‌بینی:</strong> هنوز <code>+</code> نزدی. با Smart Commit روشن، ممکن است بدون این عنوان هم Commit همه را بگیرد — برای همین خاموشش کردیم.</p>
+<p><strong>اگر Discard را زدی و فایل برگشت:</strong> Untracked (<code>U</code>) را Discard کردن یعنی حذف فایل از دیسک. VS Code معمولاً «Are you sure?» می‌پرسد. اگر پرسید و Yes گفتی، از Timeline برگردان (پایین فصل).</p>
+<p><strong>اگر Untrackedها ته یک لیست قاطی‌اند نه گروه جدا:</strong> Settings → <code>git.untrackedChanges</code> را بگذار <code>separate</code>.</p>
+<h2><span class="hx"><span class="hx-t">🔬 hunk — سه کلیک آبی روی خود diff</span></span></h2>
+<p class="keep-next">hunk = چند خط سبز/قرمز پشت‌سرهم. معادل <code>git add -p</code>.</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-hunk-zoom.png" alt="Stage Selected Ranges روی diff"/>
+<p class="figcap">شکل ۱۰پ — این سه لینک آبی فقط وقتی فایل را از Changes باز کرده باشی بالای hunk ظاهر می‌شوند.</p>
+</div>
+<ol>
+<li>در Changes <strong>یک کلیک</strong> روی فایل.</li>
+<li>در diff، خطوطی که می‌خواهی را با ماوس رنگ کن (یا هیچی انتخاب نکن اگر کل hunk را می‌خواهی).</li>
+<li><strong>یک کلیک</strong> روی یکی از سه لینک آبی بالای hunk:
+<ul>
+<li><strong>Stage Change</strong> = کل این hunk</li>
+<li><strong>Stage Selected Ranges</strong> = فقط خطوط انتخاب‌شده</li>
+<li><strong>Discard Change</strong> = همین hunk از روی دیسک برگردد</li>
+</ul>
+</li>
+</ol>
+<p><strong>باید ببینی:</strong> اگر فقط بخشی Stage شد، فایل هم در Staged می‌ماند هم در Changes (حرف گاهی <code>M</code> دو جا). این درست است.</p>
+<p><strong>اگر لینک آبی نبود:</strong></p>
+<ul>
+<li>diff را از Timeline باز کرده‌ای نه از Changes — ببند، از Source Control روی فایل کلیک کن.</li>
+<li>روی نمای پیش‌نمایش Markdown هستی نه متن — روی تب فایل خام کلیک کن.</li>
+<li>تنظیم <code>diffEditor.renderSideBySide</code> فرق ندارد؛ لینک‌ها باید باشند. VS Code را به‌روز کن.</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">▾ فلش کنار Commit — یک کلیک، پنج فرمان</span></span></h2>
+<p class="keep-next"><strong>یک کلیک روی فلش ▾ سمت راست دکمهٔ Commit</strong> (نه خود Commit).</p>
+<div class="shot zoom">
+<img src="/git-github-persian-guide/book/figures/vscode-scm-commit-menu-zoom.png" alt="منوی Commit در Source Control"/>
+<p class="figcap">شکل ۱۰ت — اگر فلش را نمی‌بینی، دکمه هنوز Commit نیست (Sync/Publish است) یا عرض ستون خیلی کم است؛ ستون را بکش عریض‌تر کن.</p>
+</div>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>کلیک روی</th>
+<th>چه می‌شود</th>
+<th>اگر مال تو خاکستری / نیست</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commit</td>
+<td>فقط ثبت محلی</td>
+<td>باید Staged یا Smart Commit داشته باشی</td>
+</tr>
+<tr>
+<td>Commit &amp; Push</td>
+<td>ثبت + ارسال به origin</td>
+<td>origin نباشد → اول Publish Branch</td>
+</tr>
+<tr>
+<td>Commit &amp; Sync</td>
+<td>ثبت + pull/push</td>
+<td>tracking نداشته باشی، Push جدا بزن</td>
+</tr>
+<tr>
+<td>Undo Last Commit</td>
+<td>آخرین کامیت باز می‌شود، فایل‌ها Staged می‌مانند</td>
+<td>کامیت نداری</td>
+</tr>
+<tr>
+<td>Amend</td>
+<td>آخرین کامیت را با Stage فعلی و پیام جدید عوض می‌کند</td>
+<td>بعد از push نزن</td>
+</tr>
+</tbody>
+</table></div><div class="callout callout-warn"><div class="callout-title">Amend بعد از push</div>
+<p>هش عوض می‌شود. اگر همکار آن کامیت را گرفته، تاریخچه دوپاره می‌شود.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">⌨️ میانبر وقتی فوکوس کجاست؟</span></span></h2>
+<p><code>Ctrl+Enter</code> فقط داخل جعبهٔ Message کامیت می‌زند. اگر فوکوس روی ادیتور باشد، ممکن است کار دیگری بکند یا هیچ.</p>
+<p class="keep-next"><strong>یک کلیک داخل Message، بعد Ctrl+Enter.</strong> اگر عادت شد: بعد از Stage، کلیک Message، میانبر.</p>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>کار</th>
+<th>کلیک / کلید</th>
+<th>شرط</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>باز کردن پنل</td>
+<td><code>Ctrl+Shift+G</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>کامیت</td>
+<td><code>Ctrl+Enter</code></td>
+<td>فوکوس روی Message</td>
+</tr>
+<tr>
+<td>Palette</td>
+<td><code>Ctrl+Shift+P</code> سپس <code>Git:</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Diff</td>
+<td>Enter روی ردیف فایل</td>
+<td>فوکوس لیست Changes</td>
+</tr>
+<tr>
+<td>Stage همه</td>
+<td><code>Git: Stage All Changes</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div><h2><span class="hx"><span class="hx-t">🧵 Timeline — این یکی داخل Source Control نیست</span></span></h2>
+<p class="keep-next"><strong>کلیک‌ها:</strong> آیکون Explorer بالا-چپ Activity Bar (دو سند) → فایل را در درخت انتخاب کن → پایین همان ستون تب <strong>Timeline</strong> را باز کن (اگر جمع است، عنوان Timeline را کلیک کن).</p>
+<div class="shot">
+<img src="/git-github-persian-guide/book/figures/vscode-timeline.png" alt="Timeline فایل در VS Code"/>
+<p class="figcap">شکل ۱۰ث — اگر Timeline خالی است، فایل را انتخاب نکرده‌ای یا Git در این پوشه نیست.</p>
+</div>
+<p><strong>یک کلیک روی یک ردیف Timeline</strong> آن نسخه را مقایسه می‌کند. Local History برای Discard فایل Untracked است.</p>
+<h2><span class="hx"><span class="hx-t">🧪 تمرین — هر کدام را تا «باید ببینی» پیش برو</span></span></h2>
+<p><strong>تمرین ۱.</strong> پوشهٔ خالی Open Folder → باید Initialize ببینی → کلیک Initialize → <code>README.md</code> بساز و Save → باید U در Changes → <code>+</code> → Message <code>docs: add readme</code> → Ctrl+Enter → باید لیست خالی شود.</p>
+<p><strong>تمرین ۲.</strong> سه فایل را Save کن → فقط روی یکی <code>+</code> → Commit → باید دو فایل در Changes مانده باشد. اگر هر سه رفتند، Smart Commit را Off کن و تمرین را تکرار کن.</p>
+<p><strong>تمرین ۳.</strong> یک فایل را چند خط عوض کن → از Changes باز کن → فقط بعضی خط‌ها را Stage Selected Ranges بزن → باید فایل هم بالا هم پایین باشد.</p>
+<p><strong>تمرین ۴.</strong> Discard یک <code>M</code> → از Timeline برگردان.</p>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Junior — چرا Save کافی نیست؟</strong> Save فقط فایل روی دیسک را عوض می‌کند. تاریخچه با کلیک Commit ساخته می‌شود.</p>
+<p><strong>Mid — چرا مال من دکمه Commit است و در عکس Sync؟</strong> چون تو تغییر ذخیره‌شده داری و عکس کتاب Working Tree تمیز + origin جلوتر را نشان می‌دهد. دکمه بر اساس وضعیت عوض می‌شود.</p>
+<p><strong>Senior — Publish to GitHub دقیقاً بعد از چند کلیک چه می‌سازد؟</strong> ریپو، <code>origin</code>، و <code>push -u</code>. بدون Sign in، همان کلیک پنجرهٔ ورود باز می‌کند نه خطا.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ چک‌لیست فهم</span></span></h2>
+<div class="keep-block"><div class="checklist">
+<ul>
+<li>سه راه باز کردن پنل را بلدی و اگر باز نشد جدول بالا را بلدی</li>
+<li>از روی برچسب دکمهٔ بزرگ می‌گویی در کدام حالتی</li>
+<li>مسیر Save → کلیک فایل → <code>+</code> → Message → Ctrl+Enter را بدون حدس می‌روی</li>
+<li>اگر صفحه با عکس یکی نبود، ستون «چرا؟» را می‌دانی نه اینکه کتاب غلط است</li>
+</ul>
+</div><p><strong>فصل بعد:</strong> همان پنل، سطح فوق‌پیشرفته — با همین قرارداد «کلیک / باید ببینی / اگر فرق داشت».</p></div>d:X
+12:X
+12:C
+0:{"buildId":"EZSyIB13lviHv3gpT-yRn","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L2",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L3",null,{"icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L4",null,{"current":10}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L2",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L2",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L2",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش یکم"," · ","بنیادها و مدل ذهنی Git"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"10"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۱۰ · Source Control از صفر"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"Source Control از صفر — Ctrl+Shift+G"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$5"}}],false,"$L6","$L7"]}]]}],["$L8","$L9","$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+1b:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+1c:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+1d:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+1e:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+6:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","$L2",null,{"href":"/book/9","className":"group flex items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5 transition-colors hover:border-primary/40 hover:bg-secondary/40","children":[["$","$L3",null,{"icon":{"name":"chevron-right","size":24,"node":[["path",{"d":"m9 18 6-6-6-6","key":"mthhwq"}]]},"className":"size-5 shrink-0 text-primary-soft"}],["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل قبل — ","۹"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"نادیده‌گرفتن و فایل بزرگ — gitignore، attributes، LFS"}]]}]]}],["$","$L2",null,{"href":"/book/11","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۱۱"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"Source Control فوق‌پیشرفته — Graph تا PR"}]]}],["$","$L3",null,{"icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+7:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۱۰"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+8:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next"}]
+9:["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true}]
+a:["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true}]
+b:["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"فصل ۱۰ · Source Control از صفر | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"Source Control از صفر — Ctrl+Shift+G — فصل ۱۰ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1c","20",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+16:true
+19:null
+d:300
+d:C
+15:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+c:"$undefined"

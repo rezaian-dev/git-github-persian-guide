@@ -1,0 +1,192 @@
+1:"$Sreact.fragment"
+2:I[22016,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],""]
+3:I[5014,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+4:I[66117,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js","/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js"],"default"]
+5:T2e20,<p class="lead">Git ابزار ثبت تاریخچهٔ کد است؛ هر کامیت یک عکس کامل از پروژه در آن لحظه است. VS Code و GitHub ظاهر این ابزارند — مغز کار همان Git روی رایانهٔ توست.</p>
+  <h2><span class="hx"><span class="hx-t">🎯 اهداف یادگیری این فصل</span></span></h2>
+<p class="keep-next">بعد از این فصل، بدون ابهام می‌توانی بگویی:</p>
+<ul>
+<li>Git چیست (برنامه روی رایانهٔ تو) و GitHub چیست (سایت میزبانی)</li>
+<li>چرا به‌جای کپی‌کردن پوشه، از Git استفاده می‌کنیم</li>
+<li>کامیت، شاخه و «عکس لحظه‌ای» یعنی چه</li>
+<li>این کتاب را با چه ترتیبی بخوانی</li>
+</ul>
+<h2><span class="hx"><span class="hx-t">🤔 چرا Git مهارت شغلی است؟</span></span></h2>
+<p>در آگهی‌های ۲۰۲۶ تقریباً هیچ نقش نرم‌افزاری بدون Git وجود ندارد. اما شرکت‌های خوب دیگر نمی‌پرسند «تفاوت <code>pull</code> و <code>fetch</code> چیست؟» — مدل ذهنی می‌پرسند:</p>
+<blockquote>
+<p>«اگر روی <code>main</code> مشترک <code>rebase</code> کنی چه فاجعه‌ای رخ می‌دهد؟»
+«چطور یک باگ را با <code>bisect</code> در تاریخچهٔ ده هزار کامیتی پیدا می‌کنی؟»
+«Ruleset با Branch Protection چه فرقی دارد؟»</p>
+</blockquote>
+<p>این کتاب برای همان سطح نوشته شده است.</p>
+<div class="callout callout-note"><div class="callout-title">سه قطعه که تا آخر کتاب تکرار می‌شوند</div>
+<p class="keep-next">تا فصل ۶ همین‌ها را با مثال می‌بینی. الان فقط معنی‌شان را بدان:</p>
+<ol>
+<li><strong>کامیت (commit)</strong> — یک عکس ثبت‌شده از <em>همه</em> فایل‌های پروژه در یک لحظه، نه فقط فهرست خطوط عوض‌شده.</li>
+<li><strong>شاخه (branch)</strong> — یک برچسب روی یک کامیت. پوشه را کپی نمی‌کند؛ فقط می‌گوید «الان این عکس، نوک کار ماست».</li>
+<li><strong>سه درخت</strong> — (الف) فایل‌هایی که در ادیتور می‌بینی، (ب) پیش‌نویس کامیت بعدی، (ج) آخرین عکس ثبت‌شده.</li>
+</ol>
+<p>هر فرمان Git فقط یکی از این‌ها را عوض می‌کند. وقتی بپرسی «این فرمان کدام را عوض کرد؟» دیگر مبهم نمی‌ماند.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">📖 تاریخچه — از BitKeeper تا Git ۳.۰</span></span></h2>
+<ul>
+<li><strong>۲۰۰۵:</strong> لینوس توروالدز Git را در دو هفته ساخت؛ هستهٔ لینوکس دیگر نمی‌توانست به BitKeeper تکیه کند.</li>
+<li><strong>۲۰۰۸:</strong> GitHub متولد شد و «اجتماع روی کد» را ساخت؛ Fork و Pull Request زبان مشترک صنعت شد.</li>
+<li><strong>۲۰۱۹:</strong> <code>git switch</code> و <code>git restore</code> آمدند تا <code>checkout</code> دوچهره را بشکنند.</li>
+<li><strong>۲۰۲۵ (Git ۲.۵۱):</strong> <code>switch</code> و <code>restore</code> دیگر آزمایشی نیستند؛ reftable و SHA-256 برای مخازن جدید آماده‌اند.</li>
+<li><strong>۲۰۲۶:</strong> Git ۳.۰ در افق است — پاکسازی فرمان‌های قدیمی، hash پیش‌فرض SHA-256، و backend سریع‌تر برای میلیون‌ها ref.</li>
+<li><strong>گیت‌هاب ۲۰۲۵–۲۰۲۶:</strong> Rulesets، Immutable Releases، Copilot Coding Agent، Agent HQ، و Actions تو در تو.</li>
+</ul>
+<div class="callout callout-tip"><div class="callout-title">دو مسیر در هر فصل — هیچ‌کدام را حذف نمی‌کنیم</div>
+<p>برای عوض کردن شاخه <strong>هرگز</strong> <code>checkout</code> نمی‌نویسیم: <strong><code>git switch</code> شاخه، <code>git restore</code> فایل.</strong></p>
+<p>هر مهارت را دو بار می‌بینی: فرمان در <strong>ترمینال</strong> و دکمه در <strong>VS Code</strong> (پنل Source Control و افزونهٔ GitHub Pull Requests). مفهوم را در ترمینال بفهم؛ کار روزانه را در VS Code انجام بده.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">🔬 Git چه چیزی نیست؟</span></span></h2>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>تصور غلط</th>
+<th>واقعیت روشن</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git همان GitHub است</td>
+<td>Git برنامهٔ روی رایانهٔ توست. GitHub فقط یکی از سایت‌های میزبان است (GitLab و Gitea هم هستند). بدون اینترنت هم Git کار می‌کند.</td>
+</tr>
+<tr>
+<td>Git فقط پشتیبان فایل است</td>
+<td>Git علاوه بر فایل، <em>چرا</em> عوض شد (پیام کامیت) و <em>چه کسی / کی</em> را هم نگه می‌دارد.</td>
+</tr>
+<tr>
+<td>شاخه = کپی کل پروژه</td>
+<td>شاخه یک برچسب کوتاه روی یک کامیت است؛ ساختنش آنی است و پوشه را دوبرابر نمی‌کند.</td>
+</tr>
+<tr>
+<td>کامیت = فقط diff</td>
+<td>کامیت یک <strong>snapshot</strong> است: عکس کامل درخت فایل‌ها در آن لحظه. Diff بعداً از مقایسهٔ دو عکس به‌دست می‌آید.</td>
+</tr>
+</tbody>
+</table></div><div class="diagram">
+<img src="/git-github-persian-guide/book/figures/dag.svg" alt="گراف DAG کامیت‌ها"/>
+<p class="figcap">شکل ۱ — هر دایره یک کامیت است. پیکان به کامیت قبلی (والد) می‌رود. حلقه وجود ندارد؛ به این گراف DAG می‌گویند. شاخه فقط نام روی یکی از دایره‌هاست.</p>
+</div>
+<p><strong>DAG</strong> یعنی Directed Acyclic Graph: گراف جهت‌دار بدون دور. اگر این یک جمله را حفظ کنی، merge (دو والد) و rebase (گره‌های جدید) دیگر رمز نیستند.</p>
+<h2><span class="hx"><span class="hx-t">🗺️ اکوسیستم ۲۰۲۶ — چه چیزی یاد بگیریم؟</span></span></h2>
+<div class="tbl-wrap"><table><thead>
+<tr>
+<th>لایه</th>
+<th>انتخاب ۲۰۲۶</th>
+<th>چرا؟</th>
+<th>جایگزین</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VCS</td>
+<td><strong>Git ۲.۵۱+</strong></td>
+<td>switch/restore پایدار، reftable</td>
+<td>Mercurial فقط میراث</td>
+</tr>
+<tr>
+<td>Host</td>
+<td><strong>GitHub</strong></td>
+<td>PR، Actions، Security، Copilot</td>
+<td>GitLab / Gitea</td>
+</tr>
+<tr>
+<td>ادیتور</td>
+<td><strong>VS Code</strong> + GitHub Pull Requests</td>
+<td>Source Control، Graph، Review داخل IDE</td>
+<td>JetBrains / Neovim</td>
+</tr>
+<tr>
+<td>CLI همراه</td>
+<td><strong>GitHub CLI (<code>gh</code>)</strong></td>
+<td>PR، Issue، Actions از ترمینال</td>
+<td>hub قدیمی</td>
+</tr>
+<tr>
+<td>کیفیت کامیت</td>
+<td><strong>Conventional Commits</strong></td>
+<td>changelog خودکار، semantic release</td>
+<td>پیام آزاد</td>
+</tr>
+<tr>
+<td>CI</td>
+<td><strong>GitHub Actions</strong></td>
+<td>OIDC، reusable workflow</td>
+<td>Jenkins میراث</td>
+</tr>
+<tr>
+<td>امنیت</td>
+<td><strong>Rulesets + signing + CodeQL</strong></td>
+<td>سیاست متمرکز، عرضهٔ قابل‌اثبات</td>
+<td>فقط branch protection کلاسیک</td>
+</tr>
+</tbody>
+</table></div><h2><span class="hx"><span class="hx-t">🧠 چگونه این کتاب را بخوانیم؟</span></span></h2>
+<h3><span class="hx"><span class="hx-t">۱. فرمان را حفظ نکن — بپرس کدام لایه عوض شد</span></span></h3>
+<p>بعد از هر فرمان از خودت بپرس: فایل روی دیسک عوض شد، پیش‌نویس کامیت عوض شد، یا تاریخچهٔ ثبت‌شده؟ (اسامی دقیق این سه لایه در فصل ۳ است.)</p>
+<h3><span class="hx"><span class="hx-t">۲. ترمینال و VS Code را با هم یاد بگیر</span></span></h3>
+<p>تقریباً هر کار دو شکل دارد: یک فرمان و یک دکمه. اگر فقط یکی را بلد باشی، در تیم گیر می‌کنی.</p>
+<h3><span class="hx"><span class="hx-t">۳. عمداً خراب کن — برگشت دارد</span></span></h3>
+<p class="keep-next">حذف تاریخچهٔ ثبت‌شده سخت است، ولی حرکت اشتباه HEAD معمولاً تا حدود ۹۰ روز در <code>reflog</code> مانده. فصل ۸ دقیقاً می‌گوید کدام Undo کدام لایه را لمس می‌کند.</p>
+<div class="cols">
+<div class="col"><div class="col-title">📘 مسیر پیشنهادی</div>
+<p><strong>هفته ۱:</strong> فصل ۱–۱۰ — مدل ذهنی + Source Control از صفر (<code>Ctrl+Shift+G</code>)<br/>
+<strong>هفته ۲:</strong> فصل ۱۱–۲۲ — همکاری واقعی روی GitHub<br/>
+<strong>هفته ۳:</strong> فصل ۲۳–۳۲ — rebase، Actions، امنیت<br/>
+<strong>هفته ۴:</strong> فصل ۳۳–۳۶ — کارگاه، اشتباهات، مصاحبه</p>
+</div>
+<div class="col"><div class="col-title">🚀 چک‌لیست فهم عمیق</div>
+<div class="checklist">
+<ul>
+<li>می‌توانی مدل را روی کاغذ بکشی؟</li>
+<li>می‌توانی همان کار را در VS Code انجام دهی؟</li>
+<li>می‌توانی بگویی کدام فرمان تاریخچه را بازنویسی می‌کند؟</li>
+<li>می‌توانی در مصاحبه ۲ دقیقه توضیح دهی؟</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-interview"><div class="callout-title">سؤالات مصاحبه (با پاسخ)</div>
+<p><strong>Junior — Git و GitHub چه فرقی دارند؟</strong> Git موتور نسخه‌بندی توزیع‌شده روی ماشین توست. GitHub سرویس میزبانی، PR، Issue، Actions و هویت تیمی است.</p>
+<p><strong>Mid — چرا Git معمولاً از SVN سریع‌تر حس می‌شود؟</strong> چون کل تاریخچه روی رایانهٔ توست و هر فایل با هش محتوایش شناخته می‌شود. شبکه فقط وقتی لازم است که بخواهی با دیگران همگام شوی — نه برای هر مقایسه.</p>
+<p><strong>Senior — DAG یعنی چه و چرا مهم است؟</strong> تاریخچه یک خط نیست؛ یک گراف است. Merge کامیتی با دو والد می‌سازد. Rebase کامیت‌های جدید می‌سازد (هش عوض می‌شود). اگر گراف را ببینی، می‌فهمی چرا force-push روی <code>main</code> کار دیگران را می‌شکند.</p>
+</div>
+<h2><span class="hx"><span class="hx-t">✅ جمع‌بندی و اتصال</span></span></h2>
+<ul>
+<li>Git روی رایانهٔ تو تاریخچه را با عکس لحظه‌ای و برچسب شاخه نگه می‌دارد.</li>
+<li>GitHub میزبان + صفحهٔ PR + قوانین تیم + اجرای خودکار تست است.</li>
+<li>مسیر این کتاب: <code>switch</code>/<code>restore</code>، VS Code، بعد GitHub، بعد امنیت و CI.</li>
+</ul>
+<p><strong>فصل بعد:</strong> نصب Git، نام و ایمیل، کلید SSH و امضای کامیت — تا هویت تو در تاریخچه درست ثبت شود.</p>d:X
+12:X
+12:C
+0:{"buildId":"EZSyIB13lviHv3gpT-yRn","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-dvh","children":[[["$","div",null,{"className":"bg-grid pointer-events-none fixed inset-0 -z-20","aria-hidden":"true"}],["$","div",null,{"className":"aurora","aria-hidden":"true","children":[["$","div",null,{"className":"a"}],["$","div",null,{"className":"b"}],["$","div",null,{"className":"c"}]]}],["$","div",null,{"className":"noise pointer-events-none fixed inset-0 z-50 opacity-5 mix-blend-overlay","aria-hidden":"true"}]],["$","header",null,{"className":"sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md","children":["$","div",null,{"className":"mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-3 px-4 md:px-5","children":[["$","$L2",null,{"href":"/book","className":"flex min-w-0 items-center gap-2.5 text-sm font-extrabold text-foreground transition-colors hover:text-primary-soft","children":[["$","span",null,{"className":"grid size-8 shrink-0 place-items-center rounded-lg border border-primary/25 bg-primary/10 text-primary-soft","children":["$","$L3",null,{"icon":{"name":"book-open","size":24,"node":[["path",{"d":"M12 5v16","key":"1f6ucr"}],["path",{"d":"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z","key":"1fyvmf"}]]},"className":"size-4"}]}],["$","span",null,{"className":"hidden truncate sm:block","children":"Git و GitHub ۲۰۲۶"}],["$","span",null,{"dir":"ltr","className":"truncate font-mono text-[11px] font-bold text-faint sm:hidden","children":"Git 2026"}]]}],["$","$L4",null,{"current":1}],["$","nav",null,{"className":"flex shrink-0 items-center gap-1.5","aria-label":"ناوبری ریدر","children":[["$","$L2",null,{"href":"/","title":"بازگشت به سایت","aria-label":"بازگشت به سایت","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4"}]}],["$","a",null,{"href":"/git-github-persian-guide/pdf/Git-GitHub-Persian-Guide.pdf","download":true,"title":"دانلود PDF","aria-label":"دانلود PDF","className":"grid size-9 place-items-center rounded-lg border border-border bg-secondary/40 text-sub transition-colors hover:border-primary/40 hover:text-primary-soft","children":["$","$L3",null,{"icon":{"name":"download","size":24,"node":[["path",{"d":"M12 15V3","key":"m9g1x1"}],["path",{"d":"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4","key":"ih7n3h"}],["path",{"d":"m7 10 5 5 5-5","key":"brsn70"}]]},"className":"size-4"}]}]]}]]}]}],["$","main",null,{"className":"mx-auto w-full max-w-[860px] px-4 pb-20 pt-8 md:px-5 md:pt-12","children":[["$","nav",null,{"dir":"rtl","className":"mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[11.5px] font-mono text-faint","aria-label":"مسیر","children":[["$","$L2",null,{"href":"/","className":"transition-colors hover:text-primary-soft","children":"سایت"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L2",null,{"href":"/book","className":"transition-colors hover:text-primary-soft","children":"کتاب"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"className":"text-primary-soft","children":["بخش یکم"," · ","بنیادها و مدل ذهنی Git"]}]]}],["$","header",null,{"className":"mb-10 flex items-start gap-4 border-b-2 border-primary pb-7 md:gap-5","children":[["$","span",null,{"dir":"ltr","aria-hidden":"true","className":"select-none pt-1 font-mono text-[clamp(34px,6vw,52px)] font-extrabold leading-none text-transparent [-webkit-text-stroke:1.5px_rgb(255_106_43_/_0.65)]","children":"01"}],["$","div",null,{"className":"min-w-0","children":[["$","p",null,{"className":"mb-1.5 text-[12px] font-bold text-primary-soft","children":"فصل ۱ · معرفی Git و نقشه راه"}],["$","h1",null,{"className":"text-[clamp(21px,3.4vw,29px)] font-extrabold leading-[1.6] text-foreground","children":"معرفی Git و نقشه راه ۲۰۲۶ — از صفر تا Senior"}]]}]]}],["$","article",null,{"className":"reader","dangerouslySetInnerHTML":{"__html":"$5"}}],false,"$L6","$L7"]}]]}],["$L8","$L9","$La"],"$Lb"]}],"isPartial":"$@c","staleTime":"$d","varyParams":null},{"rsc":"$Le","isPartial":"$@f","staleTime":"$d","varyParams":null},{"rsc":"$L10","isPartial":"$@11","staleTime":"$d","varyParams":"$12"},{"rsc":"$L13","isPartial":"$@14","staleTime":"$d","varyParams":"$12"}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+17:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"OutletBoundary"]
+18:"$Sreact.suspense"
+1a:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"ViewportBoundary"]
+1b:I[97367,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"MetadataBoundary"]
+1c:I[27201,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"IconMark"]
+1d:I[39756,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+1e:I[37457,["/git-github-persian-guide/_next/static/chunks/0espfsa5lb-pm.js","/git-github-persian-guide/_next/static/chunks/0zjh7_e1i8lox.js"],"default"]
+:HL["/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","style"]
+6:["$","nav",null,{"dir":"rtl","className":"mt-14 grid gap-3 sm:grid-cols-2","aria-label":"فصل قبل و بعد","children":[["$","span",null,{"aria-hidden":"true","className":"hidden sm:block"}],["$","$L2",null,{"href":"/book/2","className":"group flex items-center justify-end gap-3 rounded-2xl border border-primary/25 bg-primary/[0.07] px-4 py-3.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/[0.12]","children":[["$","span",null,{"className":"min-w-0","children":[["$","span",null,{"className":"block text-[11px] font-mono text-faint","children":["فصل بعد — ","۲"]}],["$","span",null,{"className":"block truncate text-[13.5px] font-bold text-sub transition-colors group-hover:text-foreground","children":"نصب و هویت — ستاپ حرفه‌ای Git در ۲۰۲۶"}]]}],["$","$L3",null,{"icon":{"name":"chevron-left","size":24,"node":[["path",{"d":"m15 18-6-6 6-6","key":"1wnfg3"}]]},"className":"size-5 shrink-0 text-primary-soft"}]]}]]}]
+7:["$","p",null,{"className":"mt-10 text-center text-[11.5px] text-faint","children":["فصل ","۱"," از ","۳۶"," · ","مرجع جامع و حرفه‌ای Git و GitHub"," · ویرایش ","1.0.0"]}]
+8:["$","link","0",{"rel":"stylesheet","href":"/git-github-persian-guide/_next/static/chunks/0nto7c8y70lz2.css","precedence":"next"}]
+9:["$","script","script-0",{"src":"/git-github-persian-guide/_next/static/chunks/311joazp-6ax1.js","async":true}]
+a:["$","script","script-1",{"src":"/git-github-persian-guide/_next/static/chunks/1gkmesvfm3_6m.js","async":true}]
+b:["$","$L17",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@19"}]}]
+e:["$","$1","h",{"children":[null,["$","$L1a",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#131829"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"فصل ۱ · معرفی Git و نقشه راه | Git و GitHub ۲۰۲۶"}],["$","meta","1",{"name":"description","content":"معرفی Git و نقشه راه ۲۰۲۶ — از صفر تا Senior — فصل ۱ از ۳۶ فصل مرجع فارسی Git و GitHub ۲۰۲۶. رایگان برای مطالعه و استفادهٔ غیرتجاری."}],["$","meta","2",{"property":"og:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","3",{"property":"og:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","4",{"property":"og:url","content":"https://rezaian-dev.github.io/git-github-persian-guide/"}],["$","meta","5",{"property":"og:site_name","content":"Persian Developer Handbook"}],["$","meta","6",{"property":"og:locale","content":"fa_IR"}],["$","meta","7",{"property":"og:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","meta","8",{"property":"og:image:width","content":"1280"}],["$","meta","9",{"property":"og:image:height","content":"640"}],["$","meta","10",{"property":"og:image:alt","content":"Git و GitHub ۲۰۲۶ — مرجع فارسی"}],["$","meta","11",{"property":"og:type","content":"book"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Git و GitHub ۲۰۲۶ | راهنمای فارسی"}],["$","meta","14",{"name":"twitter:description","content":"۳۶ فصل، ۱۴۵ صفحه — از مدل ذهنی سه درخت تا Source Control در VS Code و GitHub ۲۰۲۶."}],["$","meta","15",{"name":"twitter:image","content":"https://rezaian-dev.github.io/git-github-persian-guide/social-card.jpg"}],["$","link","16",{"rel":"icon","href":"/git-github-persian-guide/favicon.ico","sizes":"48x48"}],["$","link","17",{"rel":"icon","href":"/git-github-persian-guide/git-logo-64.png","sizes":"64x64","type":"image/png"}],["$","link","18",{"rel":"icon","href":"/git-github-persian-guide/favicon.svg","type":"image/svg+xml"}],["$","link","19",{"rel":"apple-touch-icon","href":"/git-github-persian-guide/icon-180.png","sizes":"180x180"}],["$","$L1c","20",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+10:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+16:true
+19:null
+d:300
+d:C
+15:0
+f:"$undefined"
+11:"$undefined"
+14:"$undefined"
+c:"$undefined"
